@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">SilentMoon</string>
+    <string name="appName">SilentMoon</string>
+    <string name="silentAppName">Silent</string>
+    <string name="moonAppName">Moon</string>
+    <string name="appDescriptionTitle">We are what we do</string>
+    <string name="appDescriptionText">Thousands of people are using silent moon for small meditations </string>
+    <string name="signUp">Sign up</string>
+    <string name="alreadyHaveAnAccount">Already have an account? Log in</string>
+    <string name="logInText">Log in</string>
 </resources>

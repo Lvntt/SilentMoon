@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="appName">
+        <item name="android:fontFamily">@font/airbnb_cereal_bold</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:letterSpacing">0.24</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="appDescriptionTitle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="appDescriptionText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/lightGray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="onAccentButtonText">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textColor">@color/whiteGray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+</resources>
