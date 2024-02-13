@@ -7,18 +7,23 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import dev.lantt.silentmoon.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val redirectToLogInText = findViewById<TextView>(R.id.alreadyHaveAnAccount)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+
+        setContentView(view)
+
         val spannableString = makeSpannableString(
             text = resources.getString(R.string.alreadyHaveAnAccount),
             phrase = resources.getString(R.string.logInText),
@@ -32,8 +37,10 @@ class MainActivity : AppCompatActivity() {
             // TODO navigation
         }
 
-        redirectToLogInText.movementMethod = LinkMovementMethod.getInstance()
-        redirectToLogInText.text = spannableString
+        with (binding.alreadyHaveAnAccount) {
+            movementMethod = LinkMovementMethod.getInstance()
+            text = spannableString
+        }
     }
 
     private fun makeSpannableString(
