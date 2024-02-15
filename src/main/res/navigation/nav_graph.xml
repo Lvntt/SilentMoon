@@ -3,11 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/signInSignUpFragment">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="dev.lantt.silentmoon.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/signInSignUpFragment"
+        android:name="dev.lantt.silentmoon.SignInSignUpFragment"
+        android:label="fragment_sign_in_sign_up"
+        tools:layout="@layout/fragment_sign_in_sign_up" >
+        <action
+            android:id="@+id/action_signInSignUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signInSignUpFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="dev.lantt.silentmoon.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="dev.lantt.silentmoon.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 </navigation>
