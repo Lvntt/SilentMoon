@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="darkGray">#3F414E</color>
     <color name="lightGray">#A1A4B2</color>
+    <color name="ultraMegaSuperLightGrayProMax">#F2F3F7</color>
     <color name="whiteGray">#F6F1FB</color>
     <color name="accent">#8E97FD</color>
+    <color name="facebookBg">#7583CA</color>
+    <color name="googleStroke">#EBEAEC</color>
 </resources>

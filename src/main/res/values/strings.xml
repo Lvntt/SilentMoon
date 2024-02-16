@@ -7,6 +7,13 @@
     <string name="signUp">Sign up</string>
     <string name="alreadyHaveAnAccount">Already have an account? Log in</string>
     <string name="logInText">Log in</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcomeBack">Welcome Back!</string>
+    <string name="continueWithFacebook">Continue with Facebook</string>
+    <string name="continueWithGoogle">Continue with Google⠀⠀⠀</string>
+    <string name="orLogInWithEmail">Or log in with email</string>
+    <string name="emailAddressHint">Email address</string>
+    <string name="passwordHint">Password</string>
+    <string name="noAccount">No account? Sign up</string>
+    <string name="forgotPassword">Forgot Password?</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
