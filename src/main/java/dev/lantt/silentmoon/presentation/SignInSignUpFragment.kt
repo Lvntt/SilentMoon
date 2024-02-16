@@ -1,18 +1,16 @@
-package dev.lantt.silentmoon
+package dev.lantt.silentmoon.presentation
 
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.TextPaint
 import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInSignUpBinding
+import dev.lantt.silentmoon.utils.makeSpannableString
 
 class SignInSignUpFragment : Fragment() {
 
@@ -30,9 +28,11 @@ class SignInSignUpFragment : Fragment() {
         val spannableString = makeSpannableString(
             text = resources.getString(R.string.alreadyHaveAnAccount),
             phrase = resources.getString(R.string.logInText),
-            phraseColor = ContextCompat.getColor(requireContext().applicationContext, R.color.accent)
+            phraseColor = ContextCompat.getColor(requireContext().applicationContext,
+                R.color.accent
+            )
         ) {
-            findNavController().navigate(R.id.action_signInSignUpFragment_to_signUpFragment)
+            findNavController().navigate(R.id.action_signInSignUpFragment_to_signInFragment)
         }
 
         with (binding.alreadyHaveAnAccount) {
@@ -40,39 +40,10 @@ class SignInSignUpFragment : Fragment() {
             text = spannableString
         }
         binding.signUpButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signInSignUpFragment_to_signInFragment)
+            findNavController().navigate(R.id.action_signInSignUpFragment_to_signUpFragment)
         }
 
         return binding.root
-    }
-
-    private fun makeSpannableString(
-        text: String,
-        phrase: String,
-        phraseColor: Int,
-        listener: View.OnClickListener
-    ): SpannableString {
-        val spannableString = SpannableString(text)
-        val clickableSpan = object : ClickableSpan() {
-            override fun updateDrawState(drawState: TextPaint) {
-                drawState.color = phraseColor
-                drawState.isUnderlineText = false
-            }
-            override fun onClick(view: View) {
-                listener.onClick(view)
-            }
-        }
-
-        val start = text.indexOf(phrase)
-        val end = start + phrase.length
-
-        spannableString.setSpan(
-            clickableSpan,
-            start,
-            end,
-            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        return spannableString
     }
 
     override fun onDestroyView() {

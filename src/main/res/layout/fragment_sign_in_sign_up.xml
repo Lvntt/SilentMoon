@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInSignUpFragment">
+    tools:context=".presentation.SignInSignUpFragment">
 
     <ImageView
         android:id="@+id/backgroundShape"
@@ -116,9 +116,12 @@
             android:layout_height="63dp"
             android:layout_marginStart="@dimen/padding_large"
             android:layout_marginEnd="@dimen/padding_large"
-            android:background="@drawable/accent_button_shape"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
             android:text="@string/signUp"
-            android:textAppearance="@style/onAccentButtonText"/>
+            android:textColor="@color/whiteGray"
+            android:textAppearance="@style/onButtonText"
+            app:cornerRadius="38dp" />
 
         <TextView
             android:id="@+id/alreadyHaveAnAccount"
@@ -129,6 +132,7 @@
             android:gravity="center"
             android:textAllCaps="true"
             android:textColorHighlight="#00FFFFFF"
+            android:textColor="@color/lightGray"
             android:text="@string/alreadyHaveAnAccount" />
 
     </LinearLayout>
