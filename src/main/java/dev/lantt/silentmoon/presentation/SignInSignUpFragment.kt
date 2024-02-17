@@ -5,7 +5,11 @@ import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.MarginLayoutParams
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
@@ -24,6 +28,15 @@ class SignInSignUpFragment : Fragment() {
     ): View {
 
         _binding = FragmentSignInSignUpBinding.inflate(inflater, container, false)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.appTitle) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updateLayoutParams<MarginLayoutParams> {
+                topMargin = insets.top
+            }
+
+            WindowInsetsCompat.CONSUMED
+        }
 
         val spannableString = makeSpannableString(
             text = resources.getString(R.string.alreadyHaveAnAccount),
