@@ -14,4 +14,6 @@
     <color name="accent">#8E97FD</color>
     <color name="facebookBg">#7583CA</color>
     <color name="googleStroke">#EBEAEC</color>
+    <color name="tickColor">#6CB28E</color>
+    <color name="passwordToggleColor">#3F414E</color>
 </resources>
