@@ -2,18 +2,16 @@ package dev.lantt.silentmoon.presentation
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInBinding
 import dev.lantt.silentmoon.utils.makeSpannableString
+import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class SignInFragment : Fragment() {
 
@@ -28,14 +26,7 @@ class SignInFragment : Fragment() {
 
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.welcomeBack) { view, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            view.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                topMargin = insets.top
-            }
-
-            WindowInsetsCompat.CONSUMED
-        }
+        setTopMarginInset(binding.welcomeBack)
 
         val spannableString = makeSpannableString(
             text = resources.getString(R.string.noAccount),

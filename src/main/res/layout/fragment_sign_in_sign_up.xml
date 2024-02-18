@@ -15,9 +15,9 @@
         android:src="@drawable/sign_up_sign_in_bg_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null" />
 
-    <!--    TODO chain? -->
     <LinearLayout
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
@@ -41,7 +41,8 @@
             android:id="@+id/silentMoonLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/silent_moon_logo" />
+            android:src="@drawable/silent_moon_logo"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/moonText"
@@ -74,7 +75,8 @@
             android:src="@drawable/sign_up_sign_in_main_img"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/appDescriptionTitle"
@@ -105,10 +107,10 @@
         android:id="@+id/actions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/signUpButton"
@@ -119,8 +121,8 @@
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text="@string/signUp"
-            android:textColor="@color/whiteGray"
             android:textAppearance="@style/onButtonText"
+            android:textColor="@color/whiteGray"
             app:cornerRadius="38dp" />
 
         <TextView
@@ -130,10 +132,10 @@
             android:layout_marginTop="@dimen/padding_small"
             android:layout_marginBottom="@dimen/padding_large"
             android:gravity="center"
+            android:text="@string/alreadyHaveAnAccount"
             android:textAllCaps="true"
-            android:textColorHighlight="#00FFFFFF"
             android:textColor="@color/lightGray"
-            android:text="@string/alreadyHaveAnAccount" />
+            android:textColorHighlight="#00FFFFFF" />
 
     </LinearLayout>
 
