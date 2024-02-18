@@ -22,5 +22,9 @@
     <string name="privacyPolicy">privacy policy</string>
     <string name="privacyPolicyText">Тут будет политика конфиденциальности</string>
     <string name="getStarted">Get started</string>
+    <string name="welcomeGreetingsText">Hi %1$s, Welcome\n to Silent Moon</string>
+    <string name="welcomeGreetingsTextShort">Hi %1$s, Welcome\n</string>
+    <string name="welcomeGreetingsPlaceholderText">Hi Afsar, Welcome to Silent Moon</string>
+    <string name="welcomeText">Explore the app, Find some peace of mind to prepare for meditation.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,6 +6,12 @@
         <item name="android:letterSpacing">0.24</item>
         <item name="android:textSize">16sp</item>
     </style>
+    <style name="appNameAlt">
+        <item name="android:fontFamily">@font/airbnb_cereal_bold</item>
+        <item name="android:textColor">@color/logoTextColorAlt</item>
+        <item name="android:letterSpacing">0.24</item>
+        <item name="android:textSize">16sp</item>
+    </style>
     <style name="appDescriptionTitle">
         <item name="android:fontFamily">@font/roboto_bold</item>
         <item name="android:textColor">@color/darkGray</item>
@@ -31,5 +37,19 @@
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:letterSpacing">0.05</item>
+    </style>
+    <style name="welcomeBoldTitleText">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="welcomeRegularTitleText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="welcomeRegularText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
