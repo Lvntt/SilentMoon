@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInSignUpBinding
-import dev.lantt.silentmoon.utils.makeSpannableString
+import dev.lantt.silentmoon.utils.makeClickableSpannable
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class SignInSignUpFragment : Fragment() {
@@ -28,9 +28,9 @@ class SignInSignUpFragment : Fragment() {
 
         setTopMarginInset(binding.appTitle)
 
-        val spannableString = makeSpannableString(
+        val spannableString = makeClickableSpannable(
             text = resources.getString(R.string.alreadyHaveAnAccount),
-            phrase = resources.getString(R.string.logInText),
+            clickablePhrase = resources.getString(R.string.logInText),
             phraseColor = ContextCompat.getColor(requireContext().applicationContext,
                 R.color.accent
             )

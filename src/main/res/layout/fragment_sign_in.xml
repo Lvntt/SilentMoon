@@ -15,7 +15,8 @@
         android:src="@drawable/sign_in_bg_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/welcomeBack"
@@ -46,7 +47,8 @@
         app:cornerRadius="38dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeBack" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeBack"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
 
     <Button
         android:id="@+id/logInGoogle"
@@ -66,8 +68,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logInFacebook"
-        app:strokeColor="@color/googleStroke"
-        app:strokeWidth="1dp" />
+        app:strokeColor="@color/googleGray"
+        app:strokeWidth="1dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
 
     <TextView
         android:id="@+id/orLogInWithEmail"

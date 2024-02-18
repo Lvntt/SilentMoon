@@ -12,8 +12,11 @@
     <color name="ultraMegaSuperLightGrayProMax">#F2F3F7</color>
     <color name="whiteGray">#F6F1FB</color>
     <color name="accent">#8E97FD</color>
+    <color name="accentDark">#8C96FF</color>
     <color name="facebookBg">#7583CA</color>
-    <color name="googleStroke">#EBEAEC</color>
+    <color name="googleGray">#EBEAEC</color>
     <color name="tickColor">#6CB28E</color>
+    <color name="logoTextColorAlt">#E3E5FF</color>
+    <color name="creamWhite">#FFECCC</color>
     <color name="passwordToggleColor">#3F414E</color>
 </resources>

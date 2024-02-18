@@ -10,9 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
 
-fun makeSpannableString(
+fun makeClickableSpannable(
     text: String,
-    phrase: String,
+    clickablePhrase: String,
     phraseColor: Int,
     listener: View.OnClickListener
 ): SpannableString {
@@ -27,8 +27,8 @@ fun makeSpannableString(
         }
     }
 
-    val start = text.indexOf(phrase)
-    val end = start + phrase.length
+    val start = text.indexOf(clickablePhrase)
+    val end = start + clickablePhrase.length
 
     spannableString.setSpan(
         clickableSpan,
