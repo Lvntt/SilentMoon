@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation
+package dev.lantt.silentmoon.presentation.fragments
 
 import android.os.Bundle
 import android.text.SpannableString

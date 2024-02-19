@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signInSignUpFragment"
-        android:name="dev.lantt.silentmoon.presentation.SignInSignUpFragment"
+        android:name="dev.lantt.silentmoon.presentation.fragments.SignInSignUpFragment"
         android:label="fragment_sign_in_sign_up"
         tools:layout="@layout/fragment_sign_in_sign_up" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="dev.lantt.silentmoon.presentation.SignInFragment"
+        android:name="dev.lantt.silentmoon.presentation.fragments.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="dev.lantt.silentmoon.presentation.SignUpFragment"
+        android:name="dev.lantt.silentmoon.presentation.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="dev.lantt.silentmoon.presentation.WelcomeFragment"
+        android:name="dev.lantt.silentmoon.presentation.fragments.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" />
 </navigation>
