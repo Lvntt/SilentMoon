@@ -3,5 +3,10 @@
     <dimen name="padding_small">16dp</dimen>
     <dimen name="padding_medium">24dp</dimen>
     <dimen name="padding_large">36dp</dimen>
+
+    <dimen name="padding_20">20dp</dimen>
     <dimen name="padding_32">32dp</dimen>
+
+    <dimen name="long_topic_height">210dp</dimen>
+    <dimen name="topic_top_margin">10dp</dimen>
 </resources>

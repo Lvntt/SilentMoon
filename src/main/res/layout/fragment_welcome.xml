@@ -1,138 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/accent"
     tools:context=".presentation.fragments.WelcomeFragment">
 
-    <ImageView
-        android:id="@+id/bgImage"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/welcome_bg"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@null"/>
-
-    <ImageView
-        android:id="@+id/bottomBg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/welcome_bg_bottom"
-        android:adjustViewBounds="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@null"/>
-
-    <ImageView
-        android:id="@+id/bottomBgShape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:contentDescription="@null"
-        android:src="@drawable/welcome_bg_bottom_shape"
-        app:layout_constraintBottom_toTopOf="@+id/bottomBg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/meditatingWoman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@null"
-        android:src="@drawable/meditating_woman"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomBg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_medium"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/silentText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/silentAppName"
-            android:textAppearance="@style/appNameAlt" />
+        android:background="@color/accent">
 
         <ImageView
-            android:id="@+id/silentMoonLogo"
+            android:id="@+id/bgImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/welcome_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/bottomBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/welcome_bg_bottom"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/bottomBgShape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/welcome_bg_bottom_shape"
+            app:layout_constraintBottom_toTopOf="@+id/bottomBg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/meditatingWoman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/silent_moon_logo_outline"
-            android:contentDescription="@null" />
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/meditating_woman"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomBgShape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/silentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/silentAppName"
+                android:textAppearance="@style/appNameAlt" />
+
+            <ImageView
+                android:id="@+id/silentMoonLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/silent_moon_logo_outline"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/moonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/moonAppName"
+                android:textAppearance="@style/appNameAlt" />
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/moonText"
+            android:id="@+id/greetingsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/moonAppName"
-            android:textAppearance="@style/appNameAlt" />
+            android:layout_marginTop="@dimen/padding_medium"
+            android:paddingHorizontal="50dp"
+            android:text="@string/welcomeGreetingsPlaceholderText"
+            android:textAlignment="center"
+            android:textAppearance="@style/welcomeRegularTitleText"
+            android:textColor="@color/creamWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:paddingHorizontal="21dp"
+            android:text="@string/welcomeText"
+            android:textAlignment="center"
+            android:textAppearance="@style/welcomeRegularText"
+            android:textColor="@color/googleGray"
+            app:layout_constraintBottom_toTopOf="@+id/meditatingWoman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greetingsText"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/greetingsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_medium"
-        android:paddingHorizontal="50dp"
-        android:text="@string/welcomeGreetingsPlaceholderText"
-        android:textAlignment="center"
-        android:textAppearance="@style/welcomeRegularTitleText"
-        android:textColor="@color/creamWhite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+        <Button
+            android:id="@+id/getStartedButton"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginStart="@dimen/padding_medium"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_marginEnd="@dimen/padding_medium"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/getStarted"
+            android:textAppearance="@style/onButtonText"
+            android:textColor="@color/darkGray"
+            android:backgroundTint="@color/googleGray"
+            app:cornerRadius="38dp"
+            android:layout_marginBottom="@dimen/padding_32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_medium"
-        android:paddingHorizontal="21dp"
-        android:text="@string/welcomeText"
-        android:textAlignment="center"
-        android:textAppearance="@style/welcomeRegularText"
-        android:textColor="@color/googleGray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greetingsText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/getStartedButton"
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_marginStart="@dimen/padding_medium"
-        android:layout_marginTop="@dimen/padding_medium"
-        android:layout_marginEnd="@dimen/padding_medium"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="@string/getStarted"
-        android:textAppearance="@style/onButtonText"
-        android:textColor="@color/darkGray"
-        android:backgroundTint="@color/googleGray"
-        app:cornerRadius="38dp"
-        android:layout_marginBottom="@dimen/padding_32"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

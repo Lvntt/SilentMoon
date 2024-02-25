@@ -42,5 +42,14 @@
         android:id="@+id/welcomeFragment"
         android:name="dev.lantt.silentmoon.presentation.fragments.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_chooseTopicFragment"
+            app:destination="@id/chooseTopicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseTopicFragment"
+        android:name="dev.lantt.silentmoon.presentation.fragments.ChooseTopicFragment"
+        android:label="fragment_choose_topic"
+        tools:layout="@layout/fragment_choose_topic" />
 </navigation>

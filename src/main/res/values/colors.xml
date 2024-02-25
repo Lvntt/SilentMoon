@@ -19,4 +19,22 @@
     <color name="logoTextColorAlt">#E3E5FF</color>
     <color name="creamWhite">#FFECCC</color>
     <color name="passwordToggleColor">#3F414E</color>
+
+    <color name="topicReduceStressBgColor">#8E97FD</color>
+    <color name="topicImprovePerformanceBgColor">#FA6E5A</color>
+    <color name="topicIncreaseHappinessBgColor">#FEB18F</color>
+    <color name="topicReduceAnxietyBgColor">#FFCF86</color>
+    <color name="topicPersonalGrowthBgColor">#6CB28E</color>
+    <color name="topicBetterSleepBgColor">#3F414E</color>
+    <color name="topicManageTimeBgColor">#7583CA</color>
+    <color name="topicIncreaseProductivityBgColor">#D9A5B5</color>
+
+    <color name="topicReduceStressTextColor">#FFECCC</color>
+    <color name="topicImprovePerformanceTextColor">#FEF9F3</color>
+    <color name="topicIncreaseHappinessTextColor">#3F414E</color>
+    <color name="topicReduceAnxietyTextColor">#3F414E</color>
+    <color name="topicPersonalGrowthTextColor">#FFECCC</color>
+    <color name="topicBetterSleepTextColor">#EBEAEC</color>
+    <color name="topicManageTimeTextColor">#FFECCC</color>
+    <color name="topicIncreaseProductivityTextColor">#FEF9F3</color>
 </resources>

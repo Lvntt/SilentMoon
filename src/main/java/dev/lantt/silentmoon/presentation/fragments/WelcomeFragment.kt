@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentWelcomeBinding
 import dev.lantt.silentmoon.utils.setTopMarginInset
@@ -44,6 +45,9 @@ class WelcomeFragment : Fragment() {
         )
 
         binding.greetingsText.text = spannableString
+        binding.getStartedButton.setOnClickListener {
+            findNavController().navigate(R.id.action_welcomeFragment_to_chooseTopicFragment)
+        }
 
         return binding.root
     }
