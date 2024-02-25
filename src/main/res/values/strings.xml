@@ -38,4 +38,6 @@
     <string name="topicBetterSleep">Better Sleep</string>
     <string name="topicManageTime">Manage Time</string>
     <string name="topicIncreaseProductivity">Increase Productivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
