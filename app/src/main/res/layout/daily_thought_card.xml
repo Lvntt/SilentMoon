@@ -1,0 +1,70 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dailyThoughtCardLayout"
+    android:backgroundTint="@color/dailyThoughtBackgroundColor"
+    android:background="@drawable/meditation_card_shape"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:layout_marginHorizontal="@dimen/padding_20"
+    android:layout_marginTop="@dimen/padding_20"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/basicsCourseCardLayout">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_daily_thought_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dailyThoughtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/dailyThought"
+        android:textAppearance="@style/meditationLongCardTitle"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/meditationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/meditation"
+        android:textAppearance="@style/meditationLongCardSubtitle"
+        android:textColor="@color/googleGray"
+        app:layout_constraintStart_toStartOf="@+id/dailyThoughtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/dailyThoughtTitle" />
+
+    <TextView
+        android:id="@+id/meditationDurationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="@string/meditationDuration"
+        android:textAppearance="@style/meditationLongCardSubtitle"
+        android:textColor="@color/googleGray"
+        app:layout_constraintStart_toEndOf="@+id/meditationText"
+        app:layout_constraintTop_toTopOf="@+id/meditationText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_20"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/playMeditation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkGray">#3F414E</color>
+    <color name="lightGray">#A1A4B2</color>
+    <color name="ultraMegaSuperLightGrayProMax">#F2F3F7</color>
+    <color name="whiteGray">#F6F1FB</color>
+    <color name="accent">#8E97FD</color>
+    <color name="accentDark">#8C96FF</color>
+    <color name="facebookBg">#7583CA</color>
+    <color name="googleGray">#EBEAEC</color>
+    <color name="tickColor">#6CB28E</color>
+    <color name="logoTextColorAlt">#E3E5FF</color>
+    <color name="creamWhite">#FFECCC</color>
+    <color name="passwordToggleColor">#3F414E</color>
+    <color name="milkWhite">#F7E8D0</color>
+    <color name="lightOrange">#FFC97E</color>
+
+    <color name="topicReduceStressBgColor">#8E97FD</color>
+    <color name="topicImprovePerformanceBgColor">#FA6E5A</color>
+    <color name="topicIncreaseHappinessBgColor">#FEB18F</color>
+    <color name="topicReduceAnxietyBgColor">#FFCF86</color>
+    <color name="topicPersonalGrowthBgColor">#6CB28E</color>
+    <color name="topicBetterSleepBgColor">#3F414E</color>
+    <color name="topicManageTimeBgColor">#7583CA</color>
+    <color name="topicIncreaseProductivityBgColor">#D9A5B5</color>
+
+    <color name="topicReduceStressTextColor">#FFECCC</color>
+    <color name="topicImprovePerformanceTextColor">#FEF9F3</color>
+    <color name="topicIncreaseHappinessTextColor">#3F414E</color>
+    <color name="topicReduceAnxietyTextColor">#3F414E</color>
+    <color name="topicPersonalGrowthTextColor">#FFECCC</color>
+    <color name="topicBetterSleepTextColor">#EBEAEC</color>
+    <color name="topicManageTimeTextColor">#FFECCC</color>
+    <color name="topicIncreaseProductivityTextColor">#FEF9F3</color>
+
+    <color name="meditationRecommendationFocusBgColor">#AFDBC5</color>
+    <color name="meditationRecommendationHappinessBgColor">#FEDEA5</color>
+
+    <color name="relaxationMusicCardOnButtonColor">#FEFFFE</color>
+    <color name="relaxationMusicCardSubtitleColor">#524F53</color>
+    <color name="dailyThoughtBackgroundColor">#333242</color>
+
+</resources>
