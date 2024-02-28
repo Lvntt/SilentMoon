@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInBinding
 import dev.lantt.silentmoon.utils.makeClickableSpannable
@@ -35,7 +34,7 @@ class SignInFragment : Fragment() {
                 R.color.accent
             )
         ) {
-            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+            navigateToSignUpFragment()
         }
 
         with (binding.noAccount) {
@@ -43,7 +42,7 @@ class SignInFragment : Fragment() {
             text = spannableString
         }
         binding.logInButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_welcomeFragment)
+            navigateToWelcomeFragment()
         }
 
         return binding.root
@@ -52,5 +51,25 @@ class SignInFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun navigateToWelcomeFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentHost, WelcomeFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    private fun navigateToSignUpFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentHost, SignUpFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() =
+            SignInFragment()
     }
 }

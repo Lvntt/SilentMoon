@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_20"
         android:layout_marginTop="44dp"
-        android:text="@string/homeTitlePlaceholder"
+        android:text="@string/homeTitle"
         android:textAppearance="@style/homeTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appTitle" />

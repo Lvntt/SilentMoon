@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignUpBinding
+import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.makeClickableSpannable
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
@@ -24,6 +24,8 @@ class SignUpFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        val userManager = requireActivity() as UserManager
 
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
 
@@ -49,9 +51,12 @@ class SignUpFragment : Fragment() {
         }
 
         binding.getStartedButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("username", binding.nameInput.editText?.text.toString())
-            findNavController().navigate(R.id.action_signUpFragment_to_welcomeFragment, bundle)
+            val usernameInput = binding.nameInput.editText?.text
+            val username = if (usernameInput.isNullOrEmpty()) getString(R.string.default_username) else usernameInput.toString()
+
+            userManager.setUsername(username)
+
+            navigateToWelcomeFragment()
         }
 
         return binding.root
@@ -61,4 +66,18 @@ class SignUpFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun navigateToWelcomeFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentHost, WelcomeFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() =
+            SignUpFragment()
+    }
+
 }

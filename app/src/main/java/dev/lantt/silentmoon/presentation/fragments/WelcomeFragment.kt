@@ -8,9 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentWelcomeBinding
+import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class WelcomeFragment : Fragment() {
@@ -24,14 +24,13 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+        val userManager = requireActivity() as UserManager
+        val username = userManager.getUsername()
+
         _binding = FragmentWelcomeBinding.inflate(layoutInflater, container, false)
 
         setTopMarginInset(binding.appTitle)
 
-        var username = arguments?.getString("username")
-        if (username.isNullOrBlank()) {
-            username = "Afsar"
-        }
         val spannableString = SpannableString(resources.getString(R.string.welcomeGreetingsText, username))
         val boldString = resources.getString(R.string.welcomeGreetingsTextShort, username)
         val start = 0
@@ -46,10 +45,23 @@ class WelcomeFragment : Fragment() {
 
         binding.greetingsText.text = spannableString
         binding.getStartedButton.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomeFragment_to_chooseTopicFragment)
+            navigateToChooseTopicFragment()
         }
 
         return binding.root
+    }
+
+    private fun navigateToChooseTopicFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentHost, ChooseTopicFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() =
+            WelcomeFragment()
     }
 
 }

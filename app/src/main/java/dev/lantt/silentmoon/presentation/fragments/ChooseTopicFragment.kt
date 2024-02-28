@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentChooseTopicBinding
 import dev.lantt.silentmoon.presentation.adapters.MeditationTopicAdapter
@@ -48,7 +47,7 @@ class ChooseTopicFragment : Fragment() {
             context = requireContext(),
             meditationTopics = MockMeditationTopics.topics,
             onTopicClick = {
-                findNavController().navigate(R.id.action_chooseTopicFragment_to_homeFragment)
+                navigateToHomeFragment()
             }
         )
 
@@ -56,6 +55,19 @@ class ChooseTopicFragment : Fragment() {
         meditationTopicsRV.adapter = meditationTopicAdapter
 
         return binding.root
+    }
+
+    private fun navigateToHomeFragment() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragmentHost, HomeFragment.newInstance())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() =
+            ChooseTopicFragment()
     }
 
 }

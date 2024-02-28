@@ -40,16 +40,10 @@ android {
 }
 
 dependencies {
-    val navigationVersion = "2.7.7"
-    val navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
-    val navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
-    
-    implementation(navigationFragment)
-    implementation(navigationUi)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
