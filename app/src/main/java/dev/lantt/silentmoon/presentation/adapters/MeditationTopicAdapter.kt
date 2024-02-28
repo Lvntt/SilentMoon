@@ -13,11 +13,18 @@ import dev.lantt.silentmoon.presentation.data.MeditationTopic
 
 class MeditationTopicAdapter(
     private val context: Context,
-    private val meditationTopics: List<MeditationTopic>
+    private val meditationTopics: List<MeditationTopic>,
+    private val onTopicClick: () -> Unit,
 ) : RecyclerView.Adapter<MeditationTopicAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemMeditationTopicBinding.bind(view)
+
+        init {
+            binding.root.setOnClickListener {
+                onTopicClick()
+            }
+        }
 
         fun bind(topic: MeditationTopic) = with (binding) {
             val topicLayoutParams = topicLayout.layoutParams as FrameLayout.LayoutParams

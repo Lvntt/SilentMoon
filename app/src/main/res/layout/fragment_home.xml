@@ -73,7 +73,7 @@
         layout="@layout/daily_thought_card" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/recommended_for_you"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -84,12 +84,15 @@
         app:layout_constraintTop_toBottomOf="@id/dailyThoughtCardLayout" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recommendationsRecyclerView"
+        android:id="@+id/recommendations"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_marginStart="@dimen/padding_20"
+        android:layout_marginTop="@dimen/padding_20"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/recommended_for_you"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_meditation_recommendation"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

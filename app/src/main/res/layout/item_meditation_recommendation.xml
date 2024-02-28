@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent">
-    
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_20">
+
+        <ImageView
+            android:id="@+id/recommendation_image"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/meditation_card_shape"
+            android:backgroundTint="@color/meditationRecommendationFocusBgColor"
+            android:contentDescription="@null"
+            android:src="@drawable/img_focus_recommendation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recommendation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/meditationRecommendationFocus"
+            android:textAppearance="@style/meditationLongCardTitle"
+            android:textColor="@color/darkGray"
+            app:layout_constraintStart_toStartOf="@id/recommendation_image"
+            app:layout_constraintTop_toBottomOf="@id/recommendation_image" />
+
+        <TextView
+            android:id="@+id/recommendation_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/meditationRecommendationDescription"
+            android:textAppearance="@style/meditationLongCardSubtitle"
+            android:textColor="@color/lightGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recommendation_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
