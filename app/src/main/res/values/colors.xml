@@ -47,4 +47,6 @@
     <color name="relaxationMusicCardSubtitleColor">#524F53</color>
     <color name="dailyThoughtBackgroundColor">#333242</color>
 
+    <color name="defaultBottomNavItemColor">#A0A3B1</color>
+    <color name="bottomNavigationShadow">#1F54575C</color>
 </resources>

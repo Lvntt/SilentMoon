@@ -1,98 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".presentation.fragments.HomeFragment">
 
-    <LinearLayout
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_medium"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/silentText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="@string/silentAppName"
-            android:textAppearance="@style/appName" />
-
-        <ImageView
-            android:id="@+id/silentMoonLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@null"
-            android:src="@drawable/silent_moon_logo" />
-
-        <TextView
-            android:id="@+id/moonText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/moonAppName"
-            android:textAppearance="@style/appName" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/homeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_20"
-        android:layout_marginTop="44dp"
-        android:text="@string/homeTitle"
-        android:textAppearance="@style/homeTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
-
-    <TextView
-        android:id="@+id/homeSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_20"
-        android:layout_marginTop="10dp"
-        android:text="@string/homeSubtitle"
-        android:textAppearance="@style/homeSubtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeTitle" />
-
-<!-- TODO move constraints, width and height out of included files-->
-    <include android:id="@+id/basicsCourseCardLayout"
-        layout="@layout/basics_course_card" />
-    <include android:id="@+id/relaxationMusicCardLayout"
-        layout="@layout/relaxation_music_card" />
-    <include android:id="@+id/dailyThoughtCardLayout"
-        layout="@layout/daily_thought_card" />
-
-    <TextView
-        android:id="@+id/recommended_for_you"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/recommendedForYou"
-        android:textAppearance="@style/homeHeadline"
-        android:textColor="@color/darkGray"
-        app:layout_constraintStart_toStartOf="@id/dailyThoughtCardLayout"
-        app:layout_constraintTop_toBottomOf="@id/dailyThoughtCardLayout" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recommendations"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="@dimen/padding_20"
-        android:layout_marginTop="@dimen/padding_20"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recommended_for_you"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_meditation_recommendation"/>
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/silentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/silentAppName"
+                android:textAppearance="@style/appName" />
+
+            <ImageView
+                android:id="@+id/silentMoonLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/silent_moon_logo" />
+
+            <TextView
+                android:id="@+id/moonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/moonAppName"
+                android:textAppearance="@style/appName" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="44dp"
+            android:text="@string/homeTitle"
+            android:textAppearance="@style/homeTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+
+        <TextView
+            android:id="@+id/homeSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="10dp"
+            android:text="@string/homeSubtitle"
+            android:textAppearance="@style/homeSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeTitle" />
+
+        <!-- TODO move constraints, width and height out of included files-->
+        <include android:id="@+id/basicsCourseCardLayout"
+            layout="@layout/basics_course_card" />
+        <include android:id="@+id/relaxationMusicCardLayout"
+            layout="@layout/relaxation_music_card" />
+        <include android:id="@+id/dailyThoughtCardLayout"
+            layout="@layout/daily_thought_card" />
+
+        <TextView
+            android:id="@+id/recommended_for_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/recommendedForYou"
+            android:textAppearance="@style/homeHeadline"
+            android:textColor="@color/darkGray"
+            app:layout_constraintStart_toStartOf="@id/dailyThoughtCardLayout"
+            app:layout_constraintTop_toBottomOf="@id/dailyThoughtCardLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendations"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginVertical="@dimen/padding_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recommended_for_you"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_meditation_recommendation"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

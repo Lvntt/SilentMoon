@@ -9,6 +9,7 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentHomeBinding
 import dev.lantt.silentmoon.presentation.adapters.MeditationRecommendationAdapter
 import dev.lantt.silentmoon.presentation.data.MockMeditationRecommendations
+import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 
 class HomeFragment : Fragment() {
@@ -16,6 +17,13 @@ class HomeFragment : Fragment() {
     // TODO change
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val navigationManager = requireActivity() as NavigationManager
+        navigationManager.showBottomNavigationBar()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

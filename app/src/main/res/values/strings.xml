@@ -59,8 +59,14 @@
     <string name="playMeditation">Play meditation</string>
     <string name="recommendedForYou">Recommended for you</string>
 
-    <string name="default_username">Afsar</string>
+    <string name="defaultUsername">Afsar</string>
 
-    <string name="shared_prefs_user_key">user_prefs_key</string>
-    <string name="username_prefs_key">username_key</string>
+    <string name="sharedPrefsUserKey">user_prefs_key</string>
+    <string name="usernamePrefsKey">username_key</string>
+
+    <string name="bottomNavigationHome">Home</string>
+    <string name="bottomNavigationSleep">Sleep</string>
+    <string name="bottomNavigationMeditate">Meditate</string>
+    <string name="bottomNavigationMusic">Music</string>
+    <string name="bottomNavigationProfile">Afsar</string>
 </resources>

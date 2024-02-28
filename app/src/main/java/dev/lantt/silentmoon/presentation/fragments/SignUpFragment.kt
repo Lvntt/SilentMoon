@@ -52,7 +52,8 @@ class SignUpFragment : Fragment() {
 
         binding.getStartedButton.setOnClickListener {
             val usernameInput = binding.nameInput.editText?.text
-            val username = if (usernameInput.isNullOrEmpty()) getString(R.string.default_username) else usernameInput.toString()
+            val username = if (usernameInput.isNullOrEmpty()) getString(R.string.defaultUsername)
+                else usernameInput.toString()
 
             userManager.setUsername(username)
 
