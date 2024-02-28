@@ -12,6 +12,7 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentChooseTopicBinding
 import dev.lantt.silentmoon.presentation.adapters.MeditationTopicAdapter
 import dev.lantt.silentmoon.presentation.data.MockMeditationTopics
+import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class ChooseTopicFragment : Fragment() {
@@ -47,7 +48,7 @@ class ChooseTopicFragment : Fragment() {
             context = requireContext(),
             meditationTopics = MockMeditationTopics.topics,
             onTopicClick = {
-                navigateToHomeFragment()
+                parentFragmentManager.navigateToFragment(HomeFragment.newInstance())
             }
         )
 
@@ -55,13 +56,6 @@ class ChooseTopicFragment : Fragment() {
         meditationTopicsRV.adapter = meditationTopicAdapter
 
         return binding.root
-    }
-
-    private fun navigateToHomeFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, HomeFragment.newInstance())
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {

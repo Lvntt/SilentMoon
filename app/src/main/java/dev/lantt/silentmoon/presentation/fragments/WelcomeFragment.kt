@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentWelcomeBinding
 import dev.lantt.silentmoon.utils.UserManager
+import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class WelcomeFragment : Fragment() {
@@ -45,17 +46,10 @@ class WelcomeFragment : Fragment() {
 
         binding.greetingsText.text = spannableString
         binding.getStartedButton.setOnClickListener {
-            navigateToChooseTopicFragment()
+            parentFragmentManager.navigateToFragment(ChooseTopicFragment.newInstance())
         }
 
         return binding.root
-    }
-
-    private fun navigateToChooseTopicFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, ChooseTopicFragment.newInstance())
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {

@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import dev.lantt.silentmoon.R
 
 fun makeClickableSpannable(
     text: String,
@@ -48,4 +51,11 @@ fun setTopMarginInset(view: View) {
 
         WindowInsetsCompat.CONSUMED
     }
+}
+
+fun FragmentManager.navigateToFragment(fragment: Fragment) {
+    beginTransaction()
+        .replace(R.id.fragmentHost, fragment)
+        .addToBackStack(null)
+        .commit()
 }

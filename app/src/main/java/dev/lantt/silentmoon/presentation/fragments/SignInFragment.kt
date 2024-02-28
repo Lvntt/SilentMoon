@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInBinding
 import dev.lantt.silentmoon.utils.makeClickableSpannable
+import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class SignInFragment : Fragment() {
@@ -34,7 +35,7 @@ class SignInFragment : Fragment() {
                 R.color.accent
             )
         ) {
-            navigateToSignUpFragment()
+            parentFragmentManager.navigateToFragment(SignUpFragment.newInstance())
         }
 
         with (binding.noAccount) {
@@ -42,7 +43,7 @@ class SignInFragment : Fragment() {
             text = spannableString
         }
         binding.logInButton.setOnClickListener {
-            navigateToWelcomeFragment()
+            parentFragmentManager.navigateToFragment(WelcomeFragment.newInstance())
         }
 
         return binding.root
@@ -51,20 +52,6 @@ class SignInFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun navigateToWelcomeFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, WelcomeFragment.newInstance())
-            .addToBackStack(null)
-            .commit()
-    }
-
-    private fun navigateToSignUpFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, SignUpFragment.newInstance())
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {

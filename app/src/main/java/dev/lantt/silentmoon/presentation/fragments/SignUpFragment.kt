@@ -12,6 +12,7 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignUpBinding
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.makeClickableSpannable
+import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class SignUpFragment : Fragment() {
@@ -57,7 +58,7 @@ class SignUpFragment : Fragment() {
 
             userManager.setUsername(username)
 
-            navigateToWelcomeFragment()
+            parentFragmentManager.navigateToFragment(WelcomeFragment.newInstance())
         }
 
         return binding.root
@@ -66,13 +67,6 @@ class SignUpFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun navigateToWelcomeFragment() {
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, WelcomeFragment.newInstance())
-            .addToBackStack(null)
-            .commit()
     }
 
     companion object {
