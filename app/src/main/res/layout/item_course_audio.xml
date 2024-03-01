@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/playAudioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/padding_20"
+        android:layout_marginStart="@dimen/padding_20"
+        android:contentDescription="@string/playAudio"
+        android:src="@drawable/ic_play_button_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/courseAudioTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_20"
+        android:layout_marginTop="2dp"
+        android:text="@string/focusAttention"
+        android:textAppearance="@style/courseAudioTitle"
+        android:textColor="@color/darkGray"
+        app:layout_constraintStart_toEndOf="@+id/playAudioButton"
+        app:layout_constraintTop_toTopOf="@+id/playAudioButton" />
+
+    <TextView
+        android:id="@+id/courseAudioDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/duration_10_minutes"
+        android:textAppearance="@style/courseAudioDuration"
+        android:textColor="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="@+id/playAudioButton"
+        app:layout_constraintStart_toEndOf="@+id/playAudioButton"
+        app:layout_constraintStart_toStartOf="@+id/courseAudioTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,10 +3,10 @@ package dev.lantt.silentmoon
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.ActivityMainBinding
+import dev.lantt.silentmoon.presentation.fragments.CourseDetailsFragment
 import dev.lantt.silentmoon.presentation.fragments.HomeFragment
 import dev.lantt.silentmoon.presentation.fragments.SignInSignUpFragment
 import dev.lantt.silentmoon.utils.NavigationManager
@@ -22,14 +22,13 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, SignInSignUpFragment.newInstance())
+            .replace(R.id.fragmentHost, CourseDetailsFragment.newInstance())
             .addToBackStack(null)
             .commit()
 

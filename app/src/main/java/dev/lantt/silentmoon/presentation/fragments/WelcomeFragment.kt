@@ -12,7 +12,6 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentWelcomeBinding
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment
-import dev.lantt.silentmoon.utils.setTopMarginInset
 
 class WelcomeFragment : Fragment() {
 
@@ -29,8 +28,6 @@ class WelcomeFragment : Fragment() {
         val username = userManager.getUsername()
 
         _binding = FragmentWelcomeBinding.inflate(layoutInflater, container, false)
-
-        setTopMarginInset(binding.appTitle)
 
         val spannableString = SpannableString(resources.getString(R.string.welcomeGreetingsText, username))
         val boldString = resources.getString(R.string.welcomeGreetingsTextShort, username)

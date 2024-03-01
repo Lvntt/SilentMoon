@@ -123,4 +123,39 @@
     <style name="bottomNavigationActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/accent</item>
     </style>
+
+    <style name="courseDetailsTitle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+    <style name="courseDetailsType">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="courseDetailsLabel">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="courseDetailsText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="courseDetailsTab">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="courseAudioTitle">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="courseAudioDuration">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
 </resources>

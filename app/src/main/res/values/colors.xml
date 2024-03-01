@@ -49,4 +49,6 @@
 
     <color name="defaultBottomNavItemColor">#A0A3B1</color>
     <color name="bottomNavigationShadow">#1F54575C</color>
+
+    <color name="topBarGray">#444359</color>
 </resources>

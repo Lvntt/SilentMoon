@@ -5,10 +5,6 @@ import android.text.Spanned
 import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import dev.lantt.silentmoon.R
@@ -40,17 +36,6 @@ fun makeClickableSpannable(
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
     )
     return spannableString
-}
-
-fun setTopMarginInset(view: View) {
-    ViewCompat.setOnApplyWindowInsetsListener(view) { v, windowInsets ->
-        val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-        v.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-            topMargin = insets.top
-        }
-
-        WindowInsetsCompat.CONSUMED
-    }
 }
 
 fun FragmentManager.navigateToFragment(fragment: Fragment) {

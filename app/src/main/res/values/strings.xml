@@ -69,4 +69,24 @@
     <string name="bottomNavigationMeditate">Meditate</string>
     <string name="bottomNavigationMusic">Music</string>
     <string name="bottomNavigationProfile">Afsar</string>
+
+    <string name="happyMorningTitle">Happy Morning</string>
+    <string name="happyMorningDescription">Ease the mind into a restful night’s sleep with\nthese deep, ambient tones.</string>
+    <string name="favouritesPlaceholder">24.234 Favourites</string>
+    <string name="listeningPlaceholder">34.234 Listening</string>
+    <string name="pickNarrator">Pick a Narrator</string>
+    <string name="maleVoice">Male voice</string>
+    <string name="femaleVoice">Female voice</string>
+    <string name="focusAttention">Focus Attention</string>
+    <string name="bodyScan">Body Scan</string>
+    <string name="makingHappiness">Making Happiness</string>
+
+    <string name="duration_10_minutes">10 min</string>
+    <string name="duration_5_minutes">5 min</string>
+    <string name="duration_3_minutes">3 min</string>
+
+    <string name="playAudio">Play audio</string>
+    <string name="likeCourse">Like course</string>
+    <string name="downloadCourse">Download course</string>
+
 </resources>
