@@ -11,6 +11,7 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInBinding
 import dev.lantt.silentmoon.utils.makeClickableSpannable
 import dev.lantt.silentmoon.utils.navigateToFragment
+import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class SignInFragment : Fragment() {
 
@@ -24,6 +25,8 @@ class SignInFragment : Fragment() {
     ): View {
 
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
+
+        binding.welcomeBack.setTopPaddingInset()
 
         val spannableString = makeClickableSpannable(
             text = resources.getString(R.string.noAccount),

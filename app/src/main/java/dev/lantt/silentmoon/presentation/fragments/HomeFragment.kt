@@ -11,6 +11,7 @@ import dev.lantt.silentmoon.presentation.adapters.MeditationRecommendationAdapte
 import dev.lantt.silentmoon.presentation.data.MockMeditationRecommendations
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
+import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +35,8 @@ class HomeFragment : Fragment() {
         val username = userManager.getUsername()
 
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+
+        binding.appTitle.setTopPaddingInset()
 
         val meditationRecommendationAdapter = MeditationRecommendationAdapter(
             context = requireContext(),

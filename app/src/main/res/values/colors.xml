@@ -50,5 +50,12 @@
     <color name="defaultBottomNavItemColor">#A0A3B1</color>
     <color name="bottomNavigationShadow">#1F54575C</color>
 
-    <color name="topBarGray">#444359</color>
+    <color name="signInSignUpTopBarColor">#FAF8F5</color>
+    <color name="signInTopBarColor">@color/white</color>
+    <color name="signUpTopBarColor">@color/white</color>
+    <color name="chooseTopicTopBarColor">@color/white</color>
+    <color name="remindersTopBarColor">@color/white</color>
+    <color name="homeTopBarColor">@color/white</color>
+    <color name="welcomeTopBarColor">@color/accent</color>
+    <color name="courseDetailsTopBarColor">#444359</color>
 </resources>

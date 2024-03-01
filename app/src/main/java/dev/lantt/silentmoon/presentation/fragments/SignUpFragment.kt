@@ -13,6 +13,7 @@ import dev.lantt.silentmoon.databinding.FragmentSignUpBinding
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.makeClickableSpannable
 import dev.lantt.silentmoon.utils.navigateToFragment
+import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class SignUpFragment : Fragment() {
 
@@ -28,6 +29,8 @@ class SignUpFragment : Fragment() {
         val userManager = requireActivity() as UserManager
 
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
+
+        binding.createYourAccount.setTopPaddingInset()
 
         val spannableString = makeClickableSpannable(
             text = resources.getString(R.string.iHaveReadThePrivacyPolicy),
