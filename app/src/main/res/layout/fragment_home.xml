@@ -71,13 +71,226 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/homeTitle" />
 
-        <!-- TODO move constraints, width and height out of included files-->
-        <include android:id="@+id/basicsCourseCardLayout"
-            layout="@layout/basics_course_card" />
-        <include android:id="@+id/relaxationMusicCardLayout"
-            layout="@layout/relaxation_music_card" />
-        <include android:id="@+id/dailyThoughtCardLayout"
-            layout="@layout/daily_thought_card" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/basicsCourseCardLayout"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/meditation_card_shape"
+            android:backgroundTint="@color/accent"
+            app:layout_constraintEnd_toStartOf="@+id/relaxationMusicCardLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeSubtitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/meditationDuration"
+                android:textAppearance="@style/meditationCardRegularText"
+                app:layout_constraintBottom_toBottomOf="@+id/basicsCourseStartButton"
+                app:layout_constraintEnd_toStartOf="@+id/basicsCourseStartButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/basicsCourseStartButton" />
+
+            <Button
+                android:id="@+id/basicsCourseStartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/googleGray"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="70dp"
+                android:minHeight="35dp"
+                android:text="@string/start"
+                android:textAppearance="@style/meditationCardTextOnButton"
+                android:textColor="@color/darkGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/courseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="36dp"
+                android:text="@string/course"
+                android:textAppearance="@style/meditationCardSubtitle"
+                android:textColor="@color/milkWhite"
+                app:layout_constraintBottom_toTopOf="@+id/basicsCourseStartButton"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/basics"
+                android:textAppearance="@style/meditationCardTitle"
+                android:textColor="@color/creamWhite"
+                app:layout_constraintBottom_toTopOf="@+id/courseText"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/img_basics_course"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relaxationMusicCardLayout"
+            android:layout_width="0dp"
+            android:layout_height="210dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="@dimen/padding_20"
+            android:background="@drawable/meditation_card_shape"
+            android:backgroundTint="@color/lightOrange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/basicsCourseCardLayout"
+            app:layout_constraintTop_toBottomOf="@id/homeSubtitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/meditationDuration"
+                android:textAppearance="@style/meditationCardRegularText"
+                android:textColor="@color/relaxationMusicCardSubtitleColor"
+                app:layout_constraintBottom_toBottomOf="@+id/relaxationMusicStartButton"
+                app:layout_constraintEnd_toStartOf="@+id/relaxationMusicStartButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/relaxationMusicStartButton" />
+
+            <Button
+                android:id="@+id/relaxationMusicStartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/darkGray"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="70dp"
+                android:minHeight="35dp"
+                android:text="@string/start"
+                android:textAppearance="@style/meditationCardTextOnButton"
+                android:textColor="@color/relaxationMusicCardOnButtonColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/musicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="36dp"
+                android:text="@string/music"
+                android:textAppearance="@style/meditationCardSubtitle"
+                android:textColor="@color/relaxationMusicCardSubtitleColor"
+                app:layout_constraintBottom_toTopOf="@+id/relaxationMusicStartButton"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/relaxation"
+                android:textAppearance="@style/meditationCardTitle"
+                android:textColor="@color/darkGray"
+                app:layout_constraintBottom_toTopOf="@+id/musicText"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/img_relaxation_music"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dailyThoughtCardLayout"
+            android:backgroundTint="@color/dailyThoughtBackgroundColor"
+            android:background="@drawable/meditation_card_shape"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginHorizontal="@dimen/padding_20"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/basicsCourseCardLayout">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_daily_thought_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dailyThoughtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="27dp"
+                android:text="@string/dailyThought"
+                android:textAppearance="@style/meditationLongCardTitle"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/meditationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/meditation"
+                android:textAppearance="@style/meditationLongCardSubtitle"
+                android:textColor="@color/googleGray"
+                app:layout_constraintStart_toStartOf="@+id/dailyThoughtTitle"
+                app:layout_constraintTop_toBottomOf="@+id/dailyThoughtTitle" />
+
+            <TextView
+                android:id="@+id/meditationDurationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="@string/meditationDuration"
+                android:textAppearance="@style/meditationLongCardSubtitle"
+                android:textColor="@color/googleGray"
+                app:layout_constraintStart_toEndOf="@+id/meditationText"
+                app:layout_constraintTop_toTopOf="@+id/meditationText" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_20"
+                android:src="@drawable/ic_play"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/playMeditation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/recommended_for_you"

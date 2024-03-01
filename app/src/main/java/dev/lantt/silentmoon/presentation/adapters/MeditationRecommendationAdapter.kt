@@ -12,11 +12,18 @@ import dev.lantt.silentmoon.presentation.data.MeditationRecommendation
 
 class MeditationRecommendationAdapter(
     private val context: Context,
-    private val meditationRecommendations: List<MeditationRecommendation>
+    private val meditationRecommendations: List<MeditationRecommendation>,
+    private val onRecommendationClick: () -> Unit,
 ) : RecyclerView.Adapter<MeditationRecommendationAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemMeditationRecommendationBinding.bind(view)
+
+        init {
+            binding.meditationRecommendation.setOnClickListener {
+                onRecommendationClick()
+            }
+        }
 
         fun bind(recommendation: MeditationRecommendation) = with (binding) {
             recommendationImage.setImageDrawable(ContextCompat.getDrawable(context, recommendation.image))
