@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.ActivityMainBinding
-import dev.lantt.silentmoon.presentation.fragments.CourseDetailsFragment
 import dev.lantt.silentmoon.presentation.fragments.HomeFragment
 import dev.lantt.silentmoon.presentation.fragments.SignInSignUpFragment
 import dev.lantt.silentmoon.utils.NavigationManager
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, CourseDetailsFragment.newInstance())
+            .replace(R.id.fragmentHost, SignInSignUpFragment.newInstance())
             .addToBackStack(null)
             .commit()
 
