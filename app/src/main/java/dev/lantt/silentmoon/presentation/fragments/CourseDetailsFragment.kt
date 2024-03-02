@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
+import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentCourseDetailsBinding
 import dev.lantt.silentmoon.presentation.adapters.CourseDetailsPageAdapter
 
@@ -39,6 +41,26 @@ class CourseDetailsFragment : Fragment() {
 
             }
         )
+
+        binding.backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        binding.likeButton.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.courseSaveToFavourites),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        binding.downloadButton.setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.courseDownload),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
 
         return binding.root
     }

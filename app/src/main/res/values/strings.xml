@@ -88,5 +88,8 @@
     <string name="playAudio">Play audio</string>
     <string name="likeCourse">Like course</string>
     <string name="downloadCourse">Download course</string>
+    <string name="goBack">Go back</string>
+    <string name="courseSaveToFavourites">The course was saved to favorites!</string>
+    <string name="courseDownload">The course was downloaded!</string>
 
 </resources>
