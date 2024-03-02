@@ -1,5 +1,6 @@
 package dev.lantt.silentmoon.coursedetails
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,8 +23,12 @@ class CourseAudioFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            // TODO if API condition
-            narratorType = it.getSerializable(NARRATOR_TYPE) as NarratorType
+            narratorType = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                it.getSerializable(NARRATOR_TYPE, NarratorType::class.java)
+            } else {
+                @Suppress("DEPRECATION")
+                it.getSerializable(NARRATOR_TYPE) as NarratorType
+            }
         }
     }
 
