@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.data
+package dev.lantt.silentmoon.coursedetails
 
 enum class NarratorType {
     MALE_VOICE,

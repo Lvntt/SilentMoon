@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.adapters
+package dev.lantt.silentmoon.coursedetails
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.ItemCourseAudioBinding
-import dev.lantt.silentmoon.presentation.data.CourseAudio
 
 class CourseAudioAdapter(
     private val context: Context,

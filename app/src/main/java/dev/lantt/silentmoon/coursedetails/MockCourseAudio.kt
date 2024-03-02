@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.data
+package dev.lantt.silentmoon.coursedetails
 
 import androidx.annotation.StringRes
 import dev.lantt.silentmoon.R

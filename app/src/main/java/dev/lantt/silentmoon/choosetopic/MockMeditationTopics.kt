@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.data
+package dev.lantt.silentmoon.choosetopic
 
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes

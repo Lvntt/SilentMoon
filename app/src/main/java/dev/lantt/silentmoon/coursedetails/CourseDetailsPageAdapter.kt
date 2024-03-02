@@ -1,11 +1,9 @@
-package dev.lantt.silentmoon.presentation.adapters
+package dev.lantt.silentmoon.coursedetails
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import dev.lantt.silentmoon.presentation.data.NarratorType
-import dev.lantt.silentmoon.presentation.fragments.CourseAudioFragment
 
 class CourseDetailsPageAdapter(
     fragmentManager: FragmentManager,

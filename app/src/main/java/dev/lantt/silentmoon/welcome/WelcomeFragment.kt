@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.welcome
 
 import android.os.Bundle
 import android.text.SpannableString
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentWelcomeBinding
+import dev.lantt.silentmoon.choosetopic.ChooseTopicFragment
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopPaddingInset

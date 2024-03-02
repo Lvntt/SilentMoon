@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.adapters
+package dev.lantt.silentmoon.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.ItemMeditationRecommendationBinding
-import dev.lantt.silentmoon.presentation.data.MeditationRecommendation
 
 class MeditationRecommendationAdapter(
     private val context: Context,
@@ -36,7 +35,7 @@ class MeditationRecommendationAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MeditationRecommendationAdapter.ViewHolder {
+    ): ViewHolder {
         return ViewHolder(
             LayoutInflater
                 .from(parent.context)
@@ -46,7 +45,7 @@ class MeditationRecommendationAdapter(
 
     override fun getItemCount(): Int = meditationRecommendations.size
 
-    override fun onBindViewHolder(holder: MeditationRecommendationAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(meditationRecommendations[position])
     }
 

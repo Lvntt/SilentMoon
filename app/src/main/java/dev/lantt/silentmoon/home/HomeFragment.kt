@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentHomeBinding
-import dev.lantt.silentmoon.presentation.adapters.MeditationRecommendationAdapter
-import dev.lantt.silentmoon.presentation.data.MockMeditationRecommendations
+import dev.lantt.silentmoon.coursedetails.CourseDetailsFragment
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment

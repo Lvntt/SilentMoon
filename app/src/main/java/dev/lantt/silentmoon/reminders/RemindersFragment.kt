@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.reminders
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

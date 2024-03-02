@@ -7,8 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.ActivityMainBinding
-import dev.lantt.silentmoon.presentation.fragments.HomeFragment
-import dev.lantt.silentmoon.presentation.fragments.SignInSignUpFragment
+import dev.lantt.silentmoon.home.HomeFragment
+import dev.lantt.silentmoon.signinsignup.SignInSignUpFragment
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 

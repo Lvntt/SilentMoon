@@ -1,16 +1,13 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.coursedetails
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.lantt.silentmoon.databinding.FragmentCourseAudioBinding
-import dev.lantt.silentmoon.presentation.adapters.CourseAudioAdapter
-import dev.lantt.silentmoon.presentation.data.MockCourseAudio
-import dev.lantt.silentmoon.presentation.data.NarratorType
 
 private const val NARRATOR_TYPE = "narrator_type"
 
@@ -43,7 +40,8 @@ class CourseAudioFragment : Fragment() {
                 MockCourseAudio.maleVoiceAudio else
                 MockCourseAudio.femaleVoiceAudio
         )
-        val dividerItemDecoration = DividerItemDecoration(courseAudioRV.context, LinearLayoutManager.VERTICAL)
+        val dividerItemDecoration =
+            DividerItemDecoration(courseAudioRV.context, LinearLayoutManager.VERTICAL)
 
         courseAudioRV.adapter = courseAudioAdapter
         courseAudioRV.addItemDecoration(dividerItemDecoration)

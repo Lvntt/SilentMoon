@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.coursedetails
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentCourseDetailsBinding
-import dev.lantt.silentmoon.presentation.adapters.CourseDetailsPageAdapter
 
 class CourseDetailsFragment : Fragment() {
     // TODO change

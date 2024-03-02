@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.adapters
+package dev.lantt.silentmoon.choosetopic
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.ItemMeditationTopicBinding
-import dev.lantt.silentmoon.presentation.data.MeditationTopic
 
 class MeditationTopicAdapter(
     private val context: Context,

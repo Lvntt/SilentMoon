@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.presentation.fragments
+package dev.lantt.silentmoon.signinsignup
 
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
@@ -9,6 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentSignInSignUpBinding
+import dev.lantt.silentmoon.signin.SignInFragment
+import dev.lantt.silentmoon.signup.SignUpFragment
 import dev.lantt.silentmoon.utils.makeClickableSpannable
 import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopPaddingInset
