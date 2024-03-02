@@ -12,4 +12,5 @@
     <dimen name="topic_top_margin">10dp</dimen>
 
     <dimen name="categories_horizontal_padding">20dp</dimen>
+    <dimen name="recommendations_horizontal_padding">20dp</dimen>
 </resources>

@@ -308,7 +308,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_marginStart="@dimen/padding_20"
             android:layout_marginVertical="@dimen/padding_20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recommended_for_you"

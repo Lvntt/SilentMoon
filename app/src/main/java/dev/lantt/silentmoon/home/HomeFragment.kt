@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentHomeBinding
 import dev.lantt.silentmoon.coursedetails.CourseDetailsFragment
+import dev.lantt.silentmoon.meditate.HorizontalSpaceItemDecoration
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment
@@ -31,6 +32,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+        val context = requireContext()
         val username = userManager.getUsername()
         navigationManager.showBottomNavigationBar()
 
@@ -47,8 +49,10 @@ class HomeFragment : Fragment() {
             navigateToCourseDetails()
         }
 
+        val recommendationsHorizontalPadding = context.resources.getDimensionPixelSize(R.dimen.recommendations_horizontal_padding)
+        val horizontalSpaceItemDecoration = HorizontalSpaceItemDecoration(recommendationsHorizontalPadding)
         val meditationRecommendationAdapter = MeditationRecommendationAdapter(
-            context = requireContext(),
+            context = context,
             meditationRecommendations = MockMeditationRecommendations.recommendations,
             onRecommendationClick = {
                 navigateToCourseDetails()
@@ -59,6 +63,7 @@ class HomeFragment : Fragment() {
 
         val meditationRecommendationsRV = binding.recommendations
         meditationRecommendationsRV.adapter = meditationRecommendationAdapter
+        meditationRecommendationsRV.addItemDecoration(horizontalSpaceItemDecoration)
 
         return binding.root
     }
