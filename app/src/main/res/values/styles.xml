@@ -174,4 +174,16 @@
         <item name="android:letterSpacing">0.05</item>
         <item name="android:textAllCaps">true</item>
     </style>
+
+    <style name="activeIndicatorShape">
+        <item name="cornerFamily">?attr/shapeCornerFamily</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="bottomBarActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">46dp</item>
+        <item name="android:height">46dp</item>
+        <item name="android:color">@color/accent</item>
+        <item name="shapeAppearance">@style/activeIndicatorShape</item>
+    </style>
 </resources>

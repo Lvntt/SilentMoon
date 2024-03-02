@@ -20,15 +20,23 @@ class MeditateFragment : Fragment() {
     ): View {
 
         _binding = FragmentMeditateBinding.inflate(inflater, container, false)
+        val context = requireContext()
 
         binding.meditateTitle.setTopPaddingInset()
 
         val meditationCategoryAdapter = MeditationCategoryAdapter(
-            context = requireContext(),
+            context = context,
             categories = MockMeditationCategories.categories
         )
         val categoriesRV = binding.categories
         categoriesRV.adapter = meditationCategoryAdapter
+
+        val meditationsAdapter = MeditationsAdapter(
+            context = context,
+            meditations = MockMeditations.meditations
+        )
+        val meditationsRV = binding.meditations
+        meditationsRV.adapter = meditationsAdapter
 
         return binding.root
     }

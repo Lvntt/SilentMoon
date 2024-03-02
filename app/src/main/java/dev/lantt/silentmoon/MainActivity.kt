@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, MeditateFragment.newInstance())
+            .replace(R.id.fragmentHost, SignInSignUpFragment.newInstance())
             .addToBackStack(null)
             .commit()
 

@@ -48,7 +48,7 @@
     <color name="dailyThoughtBackgroundColor">#333242</color>
 
     <color name="defaultBottomNavItemColor">#A0A3B1</color>
-    <color name="bottomNavigationShadow">#1F54575C</color>
+    <color name="bottomNavigationShadow">#0F54575C</color>
 
     <color name="signInSignUpTopBarColor">#FAF8F5</color>
     <color name="signInTopBarColor">@color/white</color>
@@ -64,4 +64,6 @@
 
     <color name="dailyCalmBackgroundColor">#F1DDCF</color>
     <color name="dailyCalmSubtitleTextColor">#5A6175</color>
+
+    <color name="meditationTextColor">#FEF9F3</color>
 </resources>
