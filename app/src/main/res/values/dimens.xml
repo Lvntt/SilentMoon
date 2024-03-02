@@ -10,4 +10,6 @@
     <dimen name="long_topic_height">210dp</dimen>
     <dimen name="long_meditation_height">210dp</dimen>
     <dimen name="topic_top_margin">10dp</dimen>
+
+    <dimen name="categories_horizontal_padding">20dp</dimen>
 </resources>

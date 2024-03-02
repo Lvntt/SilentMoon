@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentMeditateBinding
 import dev.lantt.silentmoon.utils.setTopPaddingInset
 
@@ -24,12 +25,16 @@ class MeditateFragment : Fragment() {
 
         binding.meditateTitle.setTopPaddingInset()
 
+        val categoriesHorizontalPadding = context.resources.getDimensionPixelSize(R.dimen.categories_horizontal_padding)
+        val horizontalSpaceItemDecoration = HorizontalSpaceItemDecoration(categoriesHorizontalPadding)
+
         val meditationCategoryAdapter = MeditationCategoryAdapter(
             context = context,
             categories = MockMeditationCategories.categories
         )
         val categoriesRV = binding.categories
         categoriesRV.adapter = meditationCategoryAdapter
+        categoriesRV.addItemDecoration(horizontalSpaceItemDecoration)
 
         val meditationsAdapter = MeditationsAdapter(
             context = context,
