@@ -158,4 +158,20 @@
         <item name="android:textSize">11sp</item>
         <item name="android:textAllCaps">true</item>
     </style>
+
+    <style name="meditationCategoryLabel">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="dailyCalmTitle">
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="dailyCalmSubtitle">
+        <item name="android:fontFamily">@font/helvetica_neue_medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
 </resources>

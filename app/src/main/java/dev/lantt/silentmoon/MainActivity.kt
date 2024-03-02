@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.ActivityMainBinding
 import dev.lantt.silentmoon.home.HomeFragment
+import dev.lantt.silentmoon.meditate.MeditateFragment
 import dev.lantt.silentmoon.signinsignup.SignInSignUpFragment
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentHost, SignInSignUpFragment.newInstance())
+            .replace(R.id.fragmentHost, MeditateFragment.newInstance())
             .addToBackStack(null)
             .commit()
 
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
             when (item.itemId) {
                 R.id.bottom_navigation_home -> newFragment = HomeFragment.newInstance()
                 R.id.bottom_navigation_sleep -> newFragment = SignInSignUpFragment.newInstance()
-                R.id.bottom_navigation_meditate -> newFragment = SignInSignUpFragment.newInstance()
+                R.id.bottom_navigation_meditate -> newFragment = MeditateFragment.newInstance()
                 R.id.bottom_navigation_music -> newFragment = SignInSignUpFragment.newInstance()
                 R.id.bottom_navigation_profile -> newFragment = SignInSignUpFragment.newInstance()
             }

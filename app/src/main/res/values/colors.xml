@@ -58,4 +58,10 @@
     <color name="homeTopBarColor">@color/white</color>
     <color name="welcomeTopBarColor">@color/accent</color>
     <color name="courseDetailsTopBarColor">#444359</color>
+
+    <color name="selectedCategoryTextColor">@color/darkGray</color>
+    <color name="unselectedCategoryTextColor">#A0A3B1</color>
+
+    <color name="dailyCalmBackgroundColor">#F1DDCF</color>
+    <color name="dailyCalmSubtitleTextColor">#5A6175</color>
 </resources>

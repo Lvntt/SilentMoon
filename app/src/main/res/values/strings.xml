@@ -92,4 +92,19 @@
     <string name="courseSaveToFavourites">The course was saved to favorites!</string>
     <string name="courseDownload">The course was downloaded!</string>
 
+    <string name="meditateTitle">Meditate</string>
+    <string name="meditateDescription">we can learn how to recognize when our minds are doing their normal everyday acrobatics.</string>
+
+    <string name="categoryAll">All</string>
+    <string name="categoryMy">My</string>
+    <string name="categoryAnxious">Anxious</string>
+    <string name="categorySleep">Sleep</string>
+    <string name="categoryKids">Kids</string>
+
+    <string name="dailyCalmTitle">Daily Calm</string>
+    <string name="dailyCalmDescription">APR 30 • Pause practice</string>
+    <string name="sevenDaysOfCalm">7 Days of Calm</string>
+    <string name="anxietyRelease">Anxiety Release</string>
+    <string name="howToMeditate">How to Meditate</string>
+
 </resources>
