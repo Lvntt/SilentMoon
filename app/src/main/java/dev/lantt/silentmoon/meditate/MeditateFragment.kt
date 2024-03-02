@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentMeditateBinding
+import dev.lantt.silentmoon.utils.HorizontalSpaceItemDecoration
 import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class MeditateFragment : Fragment() {

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentHomeBinding
 import dev.lantt.silentmoon.coursedetails.CourseDetailsFragment
-import dev.lantt.silentmoon.meditate.HorizontalSpaceItemDecoration
+import dev.lantt.silentmoon.utils.HorizontalSpaceItemDecoration
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment

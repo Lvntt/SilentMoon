@@ -1,4 +1,4 @@
-package dev.lantt.silentmoon.meditate
+package dev.lantt.silentmoon.utils
 
 import android.graphics.Rect
 import android.view.View
