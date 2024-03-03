@@ -11,7 +11,7 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentCourseDetailsBinding
 
 class CourseDetailsFragment : Fragment() {
-    // TODO change
+
     private var _binding: FragmentCourseDetailsBinding? = null
     private val binding get() = _binding!!
 
@@ -58,6 +58,11 @@ class CourseDetailsFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

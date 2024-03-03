@@ -18,7 +18,6 @@ import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class SignUpFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
 

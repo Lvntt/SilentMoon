@@ -12,7 +12,6 @@ import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class RemindersFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentRemindersBinding? = null
     private val binding get() = _binding!!
 
@@ -34,6 +33,11 @@ class RemindersFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

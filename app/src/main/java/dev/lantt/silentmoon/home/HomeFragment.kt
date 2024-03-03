@@ -16,7 +16,6 @@ import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class HomeFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 

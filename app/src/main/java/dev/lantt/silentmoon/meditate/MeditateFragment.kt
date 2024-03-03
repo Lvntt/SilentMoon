@@ -12,7 +12,6 @@ import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class MeditateFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentMeditateBinding? = null
     private val binding get() = _binding!!
 
@@ -45,6 +44,11 @@ class MeditateFragment : Fragment() {
         meditationsRV.adapter = meditationsAdapter
 
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

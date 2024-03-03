@@ -16,7 +16,6 @@ import dev.lantt.silentmoon.utils.setTopPaddingInset
 
 class ChooseTopicFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentChooseTopicBinding? = null
     private val binding get() = _binding!!
 

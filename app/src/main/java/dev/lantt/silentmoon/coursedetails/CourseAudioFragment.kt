@@ -14,7 +14,6 @@ private const val NARRATOR_TYPE = "narrator_type"
 
 class CourseAudioFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentCourseAudioBinding? = null
     private val binding get() = _binding!!
 
@@ -52,6 +51,11 @@ class CourseAudioFragment : Fragment() {
         courseAudioRV.addItemDecoration(dividerItemDecoration)
 
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

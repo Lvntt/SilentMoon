@@ -12,7 +12,6 @@ private const val MUSIC_NAME = "music_name"
 
 class MusicFragment : Fragment() {
 
-    // TODO change
     private var _binding: FragmentMusicBinding? = null
     private val binding get() = _binding!!
 
@@ -42,6 +41,11 @@ class MusicFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {
