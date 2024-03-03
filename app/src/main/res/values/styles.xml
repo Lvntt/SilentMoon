@@ -175,6 +175,21 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="musicName">
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+    <style name="musicDescription">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="musicTime">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="activeIndicatorShape">
         <item name="cornerFamily">?attr/shapeCornerFamily</item>
         <item name="cornerSize">18dp</item>

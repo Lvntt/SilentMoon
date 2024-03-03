@@ -85,6 +85,9 @@
     <string name="duration_5_minutes">5 min</string>
     <string name="duration_3_minutes">3 min</string>
 
+    <string name="player_duration_0_seconds">00:00</string>
+    <string name="player_music_duration">45:00</string>
+
     <string name="playAudio">Play audio</string>
     <string name="likeCourse">Like course</string>
     <string name="downloadCourse">Download course</string>
@@ -106,5 +109,8 @@
     <string name="sevenDaysOfCalm">7 Days of Calm</string>
     <string name="anxietyRelease">Anxiety Release</string>
     <string name="howToMeditate">How to Meditate</string>
+
+    <string name="rewind_15_seconds">Rewind 15 seconds</string>
+    <string name="fast_forward_15_seconds">Fast forward 15 seconds</string>
 
 </resources>

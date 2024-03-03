@@ -66,4 +66,7 @@
     <color name="dailyCalmSubtitleTextColor">#5A6175</color>
 
     <color name="meditationTextColor">#FEF9F3</color>
+
+    <color name="musicBgColor">#FAF7F2</color>
+    <color name="musicDescriptionColor">#A0A3B1</color>
 </resources>
