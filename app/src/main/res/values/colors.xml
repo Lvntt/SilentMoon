@@ -69,4 +69,7 @@
 
     <color name="musicBgColor">#FAF7F2</color>
     <color name="musicDescriptionColor">#A0A3B1</color>
+
+    <color name="weekdaySelectedTextColor">#FEFFFE</color>
+    <color name="weekdayUnselectedTextColor">#A1A4B2</color>
 </resources>

@@ -116,6 +116,15 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="remindersQuestion">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="remindersDescription">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="bottomNavigationItem">
         <item name="android:fontFamily">@font/roboto_medium</item>
         <item name="android:textSize">14sp</item>
@@ -190,6 +199,11 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="weekdayLabel">
+        <item name="android:fontFamily">@font/helvetica_neue_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="activeIndicatorShape">
         <item name="cornerFamily">?attr/shapeCornerFamily</item>
         <item name="cornerSize">18dp</item>
@@ -200,5 +214,20 @@
         <item name="android:height">46dp</item>
         <item name="android:color">@color/accent</item>
         <item name="shapeAppearance">@style/activeIndicatorShape</item>
+    </style>
+
+    <style name="weekday_chip">
+        <item name="android:checkable">true</item>
+        <item name="chipCornerRadius">50dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="chipBackgroundColor">@color/weekday_background_color</item>
+        <item name="chipStrokeColor">@color/weekday_stroke_color</item>
+        <item name="android:layout_width">41dp</item>
+        <item name="android:layout_height">41dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/weekday_text_color</item>
+        <item name="android:textAppearance">@style/weekdayLabel</item>
     </style>
 </resources>

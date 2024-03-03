@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="appName">SilentMoon</string>
     <string name="silentAppName">Silent</string>
     <string name="moonAppName">Moon</string>
@@ -41,14 +41,12 @@
 
     <string name="meditationRecommendationFocus">Focus</string>
     <string name="meditationRecommendationHappiness">Happiness</string>
-    <string name="meditationRecommendationDescription">MEDITATION • 3-10 MIN</string>
+    <string name="meditationRecommendationDescription" tools:ignore="TypographyDashes">MEDITATION • 3-10 MIN</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="homeTitle">Good Morning, %1$s</string>
     <string name="homeTitlePlaceholder">Good Morning, Afsar</string>
     <string name="homeSubtitle">We Wish you have a good day</string>
-    <string name="meditationDuration">3-10 min</string>
+    <string name="meditationDuration" tools:ignore="TypographyDashes">3-10 min</string>
     <string name="start">Start</string>
     <string name="basics">Basics</string>
     <string name="course">course</string>
@@ -112,5 +110,21 @@
 
     <string name="rewind_15_seconds">Rewind 15 seconds</string>
     <string name="fast_forward_15_seconds">Fast forward 15 seconds</string>
+
+    <string name="remindersTimeQuestion">What time would you\nlike to meditate?</string>
+    <string name="remindersTimeDescription">Any time you can choose but We recommend first thing in the morning.</string>
+    <string name="remindersDateQuestion">Which day would you\nlike to meditate?</string>
+    <string name="remindersDateDescription">Everyday is best, but we recommend picking at least five.</string>
+
+    <string name="weekdaySundayShort">SU</string>
+    <string name="weekdayMondayShort">M</string>
+    <string name="weekdayTuesdayShort">T</string>
+    <string name="weekdayWednesdayShort">W</string>
+    <string name="weekdayThursdayShort">TH</string>
+    <string name="weekdayFridayShort">F</string>
+    <string name="weekdaySaturdayShort">S</string>
+
+    <string name="save">Save</string>
+    <string name="noThanks">No thanks</string>
 
 </resources>

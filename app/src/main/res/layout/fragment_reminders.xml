@@ -1,15 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".reminders.RemindersFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/white">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/timeQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_20"
+            android:layout_marginTop="27dp"
+            android:text="@string/remindersTimeQuestion"
+            android:textAppearance="@style/remindersQuestion"
+            android:textColor="@color/darkGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_20"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:text="@string/remindersTimeDescription"
+            android:textAppearance="@style/remindersDescription"
+            android:textColor="@color/lightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeQuestion" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_20"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeDescription" />
+
+        <TextView
+            android:id="@+id/dateQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_32"
+            android:text="@string/remindersDateQuestion"
+            android:textAppearance="@style/remindersQuestion"
+            android:textColor="@color/darkGray"
+            app:layout_constraintStart_toStartOf="@+id/timeQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+        <TextView
+            android:id="@+id/dateDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_20"
+            android:paddingHorizontal="@dimen/padding_20"
+            android:text="@string/remindersDateDescription"
+            android:textAppearance="@style/remindersDescription"
+            android:textColor="@color/lightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateQuestion" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sunday"
+            style="@style/weekday_chip"
+            android:layout_marginTop="@dimen/padding_20"
+            android:text="@string/weekdaySundayShort"
+            app:layout_constraintEnd_toStartOf="@+id/monday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/monday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdayMondayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toStartOf="@+id/tuesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sunday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tuesday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdayTuesdayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toStartOf="@+id/wednesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/monday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/wednesday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdayWednesdayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toStartOf="@+id/thursday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tuesday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/thursday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdayThursdayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toStartOf="@+id/friday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/wednesday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/friday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdayFridayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toStartOf="@+id/saturday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/thursday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/saturday"
+            style="@style/weekday_chip"
+            android:text="@string/weekdaySaturdayShort"
+            android:layout_marginTop="@dimen/padding_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/friday"
+            app:layout_constraintTop_toBottomOf="@id/dateDescription"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_large"
+            android:layout_marginVertical="@dimen/padding_medium"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sunday"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/save"
+                android:textAppearance="@style/onButtonText"
+                android:textColor="@color/whiteGray"
+                app:cornerRadius="38dp"
+                app:layout_constraintBottom_toTopOf="@+id/noThanks"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sunday"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/noThanks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:gravity="center"
+                android:text="@string/noThanks"
+                android:textAllCaps="true"
+                android:textAppearance="@style/labelText"
+                android:textColor="@color/darkGray" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
