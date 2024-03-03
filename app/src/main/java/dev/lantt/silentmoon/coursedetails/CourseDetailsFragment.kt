@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentCourseDetailsBinding
 
@@ -21,25 +21,21 @@ class CourseDetailsFragment : Fragment() {
     ): View {
         _binding = FragmentCourseDetailsBinding.inflate(layoutInflater, container, false)
 
+        val context = requireContext()
         val courseDetailsPageAdapter = CourseDetailsPageAdapter(parentFragmentManager, lifecycle)
-        val tabLayout = binding.tabs
 
         binding.viewPager.adapter = courseDetailsPageAdapter
 
-        tabLayout.addOnTabSelectedListener(
-            object : TabLayout.OnTabSelectedListener {
-                override fun onTabSelected(tab: TabLayout.Tab?) {
-                    if (tab != null) {
-                        binding.viewPager.currentItem = tab.position
-                    }
+        TabLayoutMediator(binding.tabs, binding.viewPager) { tab, position ->
+            when (position) {
+                0 -> {
+                    tab.text = context.getString(R.string.maleVoice)
                 }
-
-                override fun onTabUnselected(tab: TabLayout.Tab?) {}
-
-                override fun onTabReselected(tab: TabLayout.Tab?) {}
-
+                else -> {
+                    tab.text = context.getString(R.string.femaleVoice)
+                }
             }
-        )
+        }.attach()
 
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
