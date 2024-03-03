@@ -14,14 +14,14 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/toolbarLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|snap">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="fitXY"
+                android:layout_height="match_parent"
                 android:src="@drawable/img_course_details_topbar"
+                android:adjustViewBounds="true"
                 app:layout_collapseMode="parallax"
                 android:contentDescription="@null" />
 
