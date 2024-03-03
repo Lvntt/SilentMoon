@@ -130,4 +130,13 @@
     <string name="welcomeSleepTitle">Welcome to Sleep</string>
     <string name="welcomeSleepDescription">Explore the new king of sleep. It uses sound and visualization to create perfect conditions for refreshing sleep.</string>
 
+    <string name="sleepTitle">Sleep Stories</string>
+    <string name="sleepDescription">Soothing bedtime stories to help you fall into a deep and natural sleep</string>
+    <string name="theOceanMoonTitle">The ocean moon</string>
+    <string name="theOceanMoonDescription">Non-stop 8- hour mixes of our most popular sleep audio</string>
+
+    <string name="storyNightIsland">Night Island</string>
+    <string name="storySweetSleep">Sweet Sleep</string>
+    <string name="storyGoodNight">Good Night</string>
+    <string name="storyMoonClouds">Moon Clouds</string>
 </resources>

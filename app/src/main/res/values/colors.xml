@@ -76,4 +76,6 @@
     <color name="welcomeSleepTitleColor">#E6E7F2</color>
     <color name="welcomeSleepDescriptionColor">#EBEAEC</color>
     <color name="welcomeSleepOnButtonTextColor">#F6F1FB</color>
+
+    <color name="sleepBackgroundColor">#03174C</color>
 </resources>
