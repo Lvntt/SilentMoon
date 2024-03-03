@@ -127,4 +127,7 @@
     <string name="save">Save</string>
     <string name="noThanks">No thanks</string>
 
+    <string name="welcomeSleepTitle">Welcome to Sleep</string>
+    <string name="welcomeSleepDescription">Explore the new king of sleep. It uses sound and visualization to create perfect conditions for refreshing sleep.</string>
+
 </resources>

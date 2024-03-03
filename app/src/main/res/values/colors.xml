@@ -72,4 +72,8 @@
 
     <color name="weekdaySelectedTextColor">#FEFFFE</color>
     <color name="weekdayUnselectedTextColor">#A1A4B2</color>
+
+    <color name="welcomeSleepTitleColor">#E6E7F2</color>
+    <color name="welcomeSleepDescriptionColor">#EBEAEC</color>
+    <color name="welcomeSleepOnButtonTextColor">#F6F1FB</color>
 </resources>

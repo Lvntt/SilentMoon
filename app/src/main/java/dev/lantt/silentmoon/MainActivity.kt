@@ -11,6 +11,7 @@ import dev.lantt.silentmoon.home.HomeFragment
 import dev.lantt.silentmoon.meditate.MeditateFragment
 import dev.lantt.silentmoon.music.MusicFragment
 import dev.lantt.silentmoon.signinsignup.SignInSignUpFragment
+import dev.lantt.silentmoon.sleep.welcomesleep.WelcomeSleepFragment
 import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 
@@ -43,7 +44,10 @@ class MainActivity : AppCompatActivity(), UserManager, NavigationManager {
 
             when (item.itemId) {
                 R.id.bottom_navigation_home -> newFragment = HomeFragment.newInstance()
-                R.id.bottom_navigation_sleep -> newFragment = SignInSignUpFragment.newInstance()
+                R.id.bottom_navigation_sleep -> {
+                    newFragment = WelcomeSleepFragment.newInstance()
+                    hideBottomNavigationBar()
+                }
                 R.id.bottom_navigation_meditate -> newFragment = MeditateFragment.newInstance()
                 R.id.bottom_navigation_music -> {
                     newFragment = MusicFragment.newInstance(getString(R.string.focusAttention))
