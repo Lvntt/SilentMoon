@@ -8,12 +8,24 @@
         android:id="@+id/categoryButton"
         android:layout_width="66dp"
         android:layout_height="66dp"
-        android:background="@drawable/ic_category_all"
+        android:background="@drawable/category_background_selector"
         android:textOff=""
         android:textOn=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:src="@drawable/ic_category_all"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/categoryButton"
+        android:contentDescription="@null" />
 
     <TextView
         android:id="@+id/categoryLabel"
@@ -21,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/categoryAll"
-        android:textColor="@color/unselectedCategoryTextColor"
+        android:textColor="@color/category_text_color_selector"
         android:textAppearance="@style/meditationCategoryLabel"
         app:layout_constraintEnd_toEndOf="@+id/categoryButton"
         app:layout_constraintStart_toStartOf="@+id/categoryButton"

@@ -29,7 +29,8 @@ class SleepFragment : Fragment() {
         val horizontalSpaceItemDecoration = HorizontalSpaceItemDecoration(categoriesHorizontalPadding)
         val meditationCategoryAdapter = MeditationCategoryAdapter(
             context = context,
-            categories = MockMeditationCategories.categories
+            categories = MockMeditationCategories.categories,
+            isSleepMode = true
         )
         val categoriesRV = binding.categories
         categoriesRV.adapter = meditationCategoryAdapter

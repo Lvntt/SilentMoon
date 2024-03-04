@@ -60,7 +60,9 @@
     <color name="courseDetailsTopBarColor">#444359</color>
 
     <color name="selectedCategoryTextColor">@color/darkGray</color>
+    <color name="selectedCategorySleepTextColor">#E6E7F2</color>
     <color name="unselectedCategoryTextColor">#A0A3B1</color>
+    <color name="unselectedCategorySleepTextColor">#98A1BD</color>
 
     <color name="dailyCalmBackgroundColor">#F1DDCF</color>
     <color name="dailyCalmSubtitleTextColor">#5A6175</color>

@@ -30,7 +30,8 @@ class MeditateFragment : Fragment() {
 
         val meditationCategoryAdapter = MeditationCategoryAdapter(
             context = context,
-            categories = MockMeditationCategories.categories
+            categories = MockMeditationCategories.categories,
+            isSleepMode = false
         )
         val categoriesRV = binding.categories
         categoriesRV.adapter = meditationCategoryAdapter
