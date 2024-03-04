@@ -220,6 +220,16 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="theOceanMoonTitle">
+        <item name="android:fontFamily">@font/garamond_premier_pro_semibold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="theOceanMoonDescription">
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="activeIndicatorShape">
         <item name="cornerFamily">?attr/shapeCornerFamily</item>
         <item name="cornerSize">18dp</item>

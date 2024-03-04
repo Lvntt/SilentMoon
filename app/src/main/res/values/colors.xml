@@ -80,4 +80,10 @@
     <color name="welcomeSleepOnButtonTextColor">#F6F1FB</color>
 
     <color name="sleepBackgroundColor">#03174C</color>
+
+    <color name="theOceanMoonTitleColor">#FFE7BF</color>
+    <color name="theOceanMoonDescriptionColor">#F9F9FF</color>
+
+    <color name="sleepMusicTitleColor">#E6E7F2</color>
+    <color name="sleepMusicDescriptionColor">#98A1BD</color>
 </resources>

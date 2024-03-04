@@ -36,6 +36,12 @@ class SleepFragment : Fragment() {
         categoriesRV.adapter = meditationCategoryAdapter
         categoriesRV.addItemDecoration(horizontalSpaceItemDecoration)
 
+        val sleepMusicRV = binding.sleepMusicList
+        sleepMusicRV.adapter = SleepMusicAdapter(
+            context = context,
+            sleepMusicList = MockSleepMusic.sleepMusic
+        )
+
         return binding.root
     }
 
