@@ -247,6 +247,10 @@
         <item name="android:fontFamily">@font/helvetica_neue_regular</item>
         <item name="android:textSize">24sp</item>
     </style>
+    <style name="sleepMusicSubtitle">
+        <item name="android:fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
 
     <style name="activeIndicatorShape">
         <item name="cornerFamily">?attr/shapeCornerFamily</item>
