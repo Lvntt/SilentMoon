@@ -1,158 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/sleepBackgroundColor"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sleepBackgroundColor"
     tools:context=".sleep.sleep.SleepFragment">
 
-    <ImageView
-        android:id="@+id/sleepBackgroundImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@null"
-        android:src="@drawable/img_sleep_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/sleepTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="@string/sleepTitle"
-        android:textAlignment="center"
-        android:textAppearance="@style/welcomeSleepTitle"
-        android:textColor="@color/welcomeSleepTitleColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sleepBackgroundImage" />
-
-    <TextView
-        android:id="@+id/sleepDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="69dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/sleepDescription"
-        android:textAppearance="@style/welcomeSleepDescription"
-        android:textColor="@color/welcomeSleepDescriptionColor"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sleepTitle" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categories"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="34dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sleepDescription"
-        tools:listitem="@layout/item_meditation_category" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/theOceanMoonLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categories">
+        android:layout_height="match_parent"
+        android:background="@color/sleepBackgroundColor"
+        tools:context=".sleep.sleep.SleepFragment">
 
         <ImageView
-            android:id="@+id/theOceanMoonImage"
-            android:layout_width="match_parent"
+            android:id="@+id/sleepBackgroundImage"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/padding_20"
-            android:adjustViewBounds="true"
             android:contentDescription="@null"
-            android:src="@drawable/img_the_ocean_moon"
+            android:src="@drawable/img_sleep_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Space
-            android:id="@+id/space"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/sleepTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/sleepTitle"
+            android:textAlignment="center"
+            android:textAppearance="@style/welcomeSleepTitle"
+            android:textColor="@color/welcomeSleepTitleColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sleepBackgroundImage" />
+
+        <TextView
+            android:id="@+id/sleepDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="69dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sleepDescription"
+            android:textAppearance="@style/welcomeSleepDescription"
+            android:textColor="@color/welcomeSleepDescriptionColor"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sleepTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="@id/theOceanMoonImage"
-            app:layout_constraintTop_toTopOf="@id/theOceanMoonImage"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp" />
-        
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_lock"
-            app:layout_constraintStart_toStartOf="@+id/space"
-            app:layout_constraintTop_toTopOf="@+id/space"
-            android:contentDescription="@null" />
-
-        <TextView
-            android:id="@+id/theOceanMoonTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_32"
-            android:text="@string/theOceanMoonTitle"
-            android:textAlignment="center"
-            android:textAppearance="@style/theOceanMoonTitle"
-            android:textColor="@color/theOceanMoonTitleColor"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="34dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/sleepDescription"
+            tools:listitem="@layout/item_meditation_category" />
 
-        <TextView
-            android:id="@+id/theOceanMoonDescription"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/theOceanMoonLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:paddingHorizontal="80dp"
-            android:text="@string/theOceanMoonDescription"
-            android:textAppearance="@style/theOceanMoonDescription"
-            android:textColor="@color/theOceanMoonDescriptionColor"
-            android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/theOceanMoonTitle" />
-
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_20"
-            android:backgroundTint="@color/googleGray"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:minHeight="35dp"
-            android:text="@string/start"
-            android:textAppearance="@style/meditationCardTextOnButton"
-            android:textColor="@color/darkGray"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categories">
+
+            <ImageView
+                android:id="@+id/theOceanMoonImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_20"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_the_ocean_moon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="@id/theOceanMoonImage"
+                app:layout_constraintTop_toTopOf="@id/theOceanMoonImage"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintStart_toStartOf="@+id/space"
+                app:layout_constraintTop_toTopOf="@+id/space"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/theOceanMoonTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_32"
+                android:text="@string/theOceanMoonTitle"
+                android:textAlignment="center"
+                android:textAppearance="@style/theOceanMoonTitle"
+                android:textColor="@color/theOceanMoonTitleColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/theOceanMoonDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingHorizontal="80dp"
+                android:text="@string/theOceanMoonDescription"
+                android:textAppearance="@style/theOceanMoonDescription"
+                android:textColor="@color/theOceanMoonDescriptionColor"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/theOceanMoonTitle" />
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_20"
+                android:backgroundTint="@color/googleGray"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="35dp"
+                android:text="@string/start"
+                android:textAppearance="@style/meditationCardTextOnButton"
+                android:textColor="@color/darkGray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sleepMusicList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/padding_20"
+            android:paddingStart="@dimen/padding_20"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/theOceanMoonLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:spanCount="2"
+            tools:listitem="@layout/item_sleep_music"
+            tools:ignore="RtlSymmetry" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sleepMusicList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/padding_20"
-        android:paddingStart="@dimen/padding_20"
-        android:clipToPadding="false"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/theOceanMoonLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:spanCount="2"
-        tools:listitem="@layout/item_sleep_music"
-        tools:ignore="RtlSymmetry" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

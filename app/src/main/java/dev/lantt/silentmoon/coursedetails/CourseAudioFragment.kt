@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.lantt.silentmoon.databinding.FragmentCourseAudioBinding
+import dev.lantt.silentmoon.music.MusicFragment
+import dev.lantt.silentmoon.utils.navigateToFragment
 
 private const val NARRATOR_TYPE = "narrator_type"
 
@@ -42,7 +44,10 @@ class CourseAudioFragment : Fragment() {
             context = requireContext(),
             courseAudio = if (narratorType == NarratorType.MALE_VOICE)
                 MockCourseAudio.maleVoiceAudio else
-                MockCourseAudio.femaleVoiceAudio
+                MockCourseAudio.femaleVoiceAudio,
+            onCourseAudioClick = {
+                parentFragment?.parentFragmentManager?.navigateToFragment(MusicFragment.newInstance(getString(it.title)))
+            }
         )
         val dividerItemDecoration =
             DividerItemDecoration(courseAudioRV.context, LinearLayoutManager.VERTICAL)

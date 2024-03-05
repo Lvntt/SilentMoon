@@ -41,27 +41,6 @@ class MeditationCategoryAdapter(
                 categoryLabel.text = ContextCompat.getString(context, category.label)
                 categoryLabel.setTextColor(textColor)
             }
-
-//            if (isInitiallySelected) {
-//                categoryButton.isChecked = true
-//                categoryLabel.text = ContextCompat.getString(context, category.label)
-//                categoryButton.background = ContextCompat.getDrawable(context, category.icon)
-//                categoryLabel.setTextColor(ContextCompat.getColor(context, R.color.selectedCategoryTextColor))
-//            } else {
-//                categoryLabel.text = ContextCompat.getString(context, category.label)
-//                categoryButton.background = ContextCompat.getDrawable(context, category.unselectedImage)
-//                categoryLabel.setTextColor(ContextCompat.getColor(context, R.color.unselectedCategoryTextColor))
-//            }
-//
-//            binding.categoryButton.setOnCheckedChangeListener { _, isChecked ->
-//                if (isChecked) {
-//                    categoryButton.setBackgroundDrawable(ContextCompat.getDrawable(context, category.icon))
-//                    categoryLabel.setTextColor(ContextCompat.getColor(context, R.color.selectedCategoryTextColor))
-//                } else {
-//                    categoryButton.setBackgroundDrawable(ContextCompat.getDrawable(context, category.unselectedImage))
-//                    categoryLabel.setTextColor(ContextCompat.getColor(context, R.color.unselectedCategoryTextColor))
-//                }
-//            }
         }
 
         private fun getTextColorRes(isChecked: Boolean): Int =

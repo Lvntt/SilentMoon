@@ -12,12 +12,17 @@ import dev.lantt.silentmoon.databinding.ItemCourseAudioBinding
 class CourseAudioAdapter(
     private val context: Context,
     private val courseAudio: List<CourseAudio>,
+    private val onCourseAudioClick: (CourseAudio) -> Unit,
 ) : RecyclerView.Adapter<CourseAudioAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemCourseAudioBinding.bind(view)
 
         fun bind(audio: CourseAudio) = with(binding) {
+            playAudioButton.setOnClickListener {
+                onCourseAudioClick(audio)
+            }
+
             if (audio.isAccent) {
                 playAudioButton.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_play_button_accent))
             } else {

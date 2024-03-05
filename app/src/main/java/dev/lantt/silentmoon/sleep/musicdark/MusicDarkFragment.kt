@@ -30,6 +30,12 @@ class MusicDarkFragment : Fragment() {
 
         _binding = FragmentMusicDarkBinding.inflate(inflater, container, false)
 
+        binding.musicName.text = musicName
+
+        binding.closeButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
         return binding.root
     }
 

@@ -35,6 +35,8 @@ class MusicFragment : Fragment() {
 
         _binding = FragmentMusicBinding.inflate(inflater, container, false)
 
+        binding.musicName.text = musicName
+
         binding.closeButton.setOnClickListener {
             parentFragmentManager.popBackStack()
             navigationManager.showBottomNavigationBar()

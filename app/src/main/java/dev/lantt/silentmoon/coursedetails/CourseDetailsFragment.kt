@@ -22,7 +22,7 @@ class CourseDetailsFragment : Fragment() {
         _binding = FragmentCourseDetailsBinding.inflate(layoutInflater, container, false)
 
         val context = requireContext()
-        val courseDetailsPageAdapter = CourseDetailsPageAdapter(parentFragmentManager, lifecycle)
+        val courseDetailsPageAdapter = CourseDetailsPageAdapter(childFragmentManager, lifecycle)
 
         binding.viewPager.adapter = courseDetailsPageAdapter
 

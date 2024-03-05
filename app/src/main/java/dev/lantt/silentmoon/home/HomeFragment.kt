@@ -47,6 +47,12 @@ class HomeFragment : Fragment() {
         binding.dailyThoughtCardLayout.setOnClickListener {
             navigateToCourseDetails()
         }
+        binding.basicsCourseStartButton.setOnClickListener {
+            navigateToCourseDetails()
+        }
+        binding.relaxationMusicStartButton.setOnClickListener {
+            navigateToCourseDetails()
+        }
 
         val recommendationsHorizontalPadding = context.resources.getDimensionPixelSize(R.dimen.recommendations_horizontal_padding)
         val horizontalSpaceItemDecoration = HorizontalSpaceItemDecoration(recommendationsHorizontalPadding)

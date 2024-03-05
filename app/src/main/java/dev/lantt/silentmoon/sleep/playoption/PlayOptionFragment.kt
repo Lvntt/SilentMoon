@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentPlayOptionBinding
+import dev.lantt.silentmoon.sleep.musicdark.MusicDarkFragment
 import dev.lantt.silentmoon.sleep.sleep.MockSleepMusic
 import dev.lantt.silentmoon.sleep.sleep.SleepMusicAdapter
+import dev.lantt.silentmoon.utils.navigateToFragment
 
 class PlayOptionFragment : Fragment() {
 
@@ -21,12 +24,23 @@ class PlayOptionFragment : Fragment() {
 
         _binding = FragmentPlayOptionBinding.inflate(inflater, container, false)
 
+        binding.playButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(MusicDarkFragment.newInstance(getString(R.string.storyNightIsland)))
+        }
+
+        binding.backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
         val context = requireContext()
 
         val sleepMusicRV = binding.sleepMusicList
         sleepMusicRV.adapter = SleepMusicAdapter(
             context = context,
-            sleepMusicList = MockSleepMusic.sleepMusic
+            sleepMusicList = MockSleepMusic.sleepMusic,
+            onSleepMusicClick = {
+                parentFragmentManager.navigateToFragment(newInstance())
+            }
         )
 
         return binding.root
