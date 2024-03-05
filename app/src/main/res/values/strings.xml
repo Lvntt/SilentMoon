@@ -126,6 +126,8 @@
 
     <string name="save">Save</string>
     <string name="noThanks">No thanks</string>
+    <string name="related">Related</string>
+    <string name="play">Play</string>
 
     <string name="welcomeSleepTitle">Welcome to Sleep</string>
     <string name="welcomeSleepDescription">Explore the new king of sleep. It uses sound and visualization to create perfect conditions for refreshing sleep.</string>
@@ -140,4 +142,6 @@
     <string name="storySweetSleep">Sweet Sleep</string>
     <string name="storyGoodNight">Good Night</string>
     <string name="storyMoonClouds">Moon Clouds</string>
+
+    <string name="sleepMusicDescription">Ease the mind into a restful night’s sleep with\nthese deep, ambient tones.</string>
 </resources>

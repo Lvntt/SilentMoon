@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sleepBackgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".sleep.playoption.PlayOptionFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|snap">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_play_option_toolbar"
+                android:adjustViewBounds="true"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@null" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/backButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:contentDescription="@string/goBack" />
+
+                    <ImageView
+                        android:id="@+id/downloadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_32"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@string/downloadCourse"
+                        android:src="@drawable/ic_download"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/likeButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_32"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@string/likeCourse"
+                        android:src="@drawable/ic_like"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/downloadButton"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/sleepBackgroundColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_marginStart="@dimen/padding_20"
+                android:text="@string/storyNightIsland"
+                android:textAppearance="@style/sleepMusicTitle"
+                android:textColor="@color/sleepMusicTitleColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/courseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:text="@string/sleepMusicDuration"
+                android:textAppearance="@style/sleepMusicDuration"
+                android:textColor="@color/sleepMusicDescriptionColor"
+                app:layout_constraintStart_toStartOf="@+id/courseTitle"
+                app:layout_constraintTop_toBottomOf="@id/courseTitle" />
+
+            <TextView
+                android:id="@+id/courseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_20"
+                android:text="@string/sleepMusicDescription"
+                android:textAppearance="@style/sleepMusicDescription"
+                android:textColor="@color/sleepMusicDescriptionColor"
+                app:layout_constraintStart_toStartOf="@+id/courseType"
+                app:layout_constraintTop_toBottomOf="@id/courseType" />
+
+            <ImageView
+                android:id="@+id/heartIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_32"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_heart_white"
+                app:layout_constraintStart_toStartOf="@+id/courseDescription"
+                app:layout_constraintTop_toBottomOf="@id/courseDescription" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/favouritesPlaceholder"
+                android:textAppearance="@style/courseDetailsLabel"
+                android:textColor="@color/sleepMusicTitleColor"
+                app:layout_constraintBottom_toBottomOf="@+id/heartIcon"
+                app:layout_constraintStart_toEndOf="@+id/heartIcon"
+                app:layout_constraintTop_toTopOf="@+id/heartIcon" />
+
+            <ImageView
+                android:id="@+id/headphonesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_32"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_headphones_white"
+                app:layout_constraintEnd_toStartOf="@id/listeningCountText"
+                app:layout_constraintTop_toBottomOf="@id/courseDescription" />
+
+            <TextView
+                android:id="@+id/listeningCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_20"
+                android:layout_marginTop="@dimen/padding_32"
+                android:text="@string/listeningPlaceholder"
+                android:textColor="@color/sleepMusicTitleColor"
+                android:textAppearance="@style/courseDetailsLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/courseDescription"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="@dimen/padding_20"
+                app:dividerColor="@color/sleepMusicDescriptionColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/heartIcon" />
+
+            <TextView
+                android:id="@+id/relatedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/related"
+                android:textAppearance="@style/sleepMusicRelated"
+                android:textColor="@color/sleepMusicTitleColor"
+                app:layout_constraintStart_toStartOf="@+id/heartIcon"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sleepMusicList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_20"
+                android:paddingStart="@dimen/padding_20"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relatedText"
+                app:layout_constraintBottom_toTopOf="@+id/playButton"
+                app:spanCount="2"
+                tools:listitem="@layout/item_sleep_music"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginHorizontal="@dimen/padding_20"
+                android:layout_marginBottom="@dimen/padding_32"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/play"
+                android:textAppearance="@style/welcomeSleepOnButton"
+                android:textColor="@color/whiteGray"
+                app:cornerRadius="38dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
