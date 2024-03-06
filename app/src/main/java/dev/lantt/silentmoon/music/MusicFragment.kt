@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.FragmentMusicBinding
-import dev.lantt.silentmoon.utils.NavigationManager
 
 private const val MUSIC_NAME = "music_name"
 
@@ -16,10 +15,6 @@ class MusicFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var musicName: String? = null
-
-    private val navigationManager by lazy {
-        requireActivity() as NavigationManager
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +34,6 @@ class MusicFragment : Fragment() {
 
         binding.closeButton.setOnClickListener {
             parentFragmentManager.popBackStack()
-            navigationManager.showBottomNavigationBar()
         }
 
         return binding.root

@@ -12,17 +12,13 @@ import dev.lantt.silentmoon.meditate.MockMeditationCategories
 import dev.lantt.silentmoon.sleep.playoption.PlayOptionFragment
 import dev.lantt.silentmoon.sleep.sleepmusic.SleepMusicFragment
 import dev.lantt.silentmoon.utils.HorizontalSpaceItemDecoration
-import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.navigateToFragment
+import dev.lantt.silentmoon.utils.navigateToFragmentWithBottomBar
 
 class SleepFragment : Fragment() {
 
     private var _binding: FragmentSleepBinding? = null
     private val binding get() = _binding!!
-
-    private val navigationManager by lazy {
-        requireActivity() as NavigationManager
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,11 +28,11 @@ class SleepFragment : Fragment() {
         _binding = FragmentSleepBinding.inflate(inflater, container, false)
 
         binding.theOceanMoonImage.setOnClickListener {
-            parentFragmentManager.navigateToFragment(SleepMusicFragment.newInstance())
+            parentFragmentManager.navigateToFragmentWithBottomBar(SleepMusicFragment.newInstance())
         }
 
         binding.startButton.setOnClickListener {
-            parentFragmentManager.navigateToFragment(SleepMusicFragment.newInstance())
+            parentFragmentManager.navigateToFragmentWithBottomBar(SleepMusicFragment.newInstance())
         }
 
         val context = requireContext()
@@ -57,8 +53,7 @@ class SleepFragment : Fragment() {
             context = context,
             sleepMusicList = MockSleepMusic.sleepMusic,
             onSleepMusicClick = {
-                navigationManager.hideBottomNavigationBar()
-                parentFragmentManager.navigateToFragment(PlayOptionFragment.newInstance())
+                parentFragment?.parentFragmentManager?.navigateToFragment(PlayOptionFragment.newInstance())
             }
         )
 

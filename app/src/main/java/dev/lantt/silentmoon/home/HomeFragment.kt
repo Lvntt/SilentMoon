@@ -9,7 +9,6 @@ import dev.lantt.silentmoon.R
 import dev.lantt.silentmoon.databinding.FragmentHomeBinding
 import dev.lantt.silentmoon.coursedetails.CourseDetailsFragment
 import dev.lantt.silentmoon.utils.HorizontalSpaceItemDecoration
-import dev.lantt.silentmoon.utils.NavigationManager
 import dev.lantt.silentmoon.utils.UserManager
 import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopPaddingInset
@@ -22,9 +21,6 @@ class HomeFragment : Fragment() {
     private val userManager by lazy {
         requireActivity() as UserManager
     }
-    private val navigationManager by lazy {
-        requireActivity() as NavigationManager
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +29,6 @@ class HomeFragment : Fragment() {
 
         val context = requireContext()
         val username = userManager.getUsername()
-        navigationManager.showBottomNavigationBar()
 
         _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
@@ -79,8 +74,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun navigateToCourseDetails() {
-        parentFragmentManager.navigateToFragment(CourseDetailsFragment.newInstance())
-        navigationManager.hideBottomNavigationBar()
+        parentFragment?.parentFragmentManager?.navigateToFragment(CourseDetailsFragment.newInstance())
     }
 
     companion object {

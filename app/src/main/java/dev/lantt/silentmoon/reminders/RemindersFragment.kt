@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import dev.lantt.silentmoon.BottomNavigationHostFragment
 import dev.lantt.silentmoon.databinding.FragmentRemindersBinding
-import dev.lantt.silentmoon.home.HomeFragment
 import dev.lantt.silentmoon.utils.navigateToFragment
 import dev.lantt.silentmoon.utils.setTopPaddingInset
 
@@ -25,11 +25,11 @@ class RemindersFragment : Fragment() {
         binding.timeQuestion.setTopPaddingInset()
 
         binding.saveButton.setOnClickListener {
-            parentFragmentManager.navigateToFragment(HomeFragment.newInstance())
+            parentFragmentManager.navigateToFragment(BottomNavigationHostFragment.newInstance())
         }
 
         binding.noThanks.setOnClickListener {
-            parentFragmentManager.navigateToFragment(HomeFragment.newInstance())
+            parentFragmentManager.navigateToFragment(BottomNavigationHostFragment.newInstance())
         }
 
         return binding.root

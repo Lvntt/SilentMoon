@@ -11,38 +11,9 @@
         android:id="@+id/fragmentHost"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar_shadow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    TODO fix shadow-->
-    <View
-        android:id="@+id/bottom_navigation_bar_shadow"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@drawable/bottom_navigation_shadow"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:itemActiveIndicatorStyle="@style/bottomBarActiveIndicator"
-        app:itemIconTint="@drawable/bottom_nav_icon_selector"
-        app:itemPaddingBottom="0dp"
-        app:itemTextAppearanceActive="@style/bottomNavigationItem"
-        app:itemTextAppearanceActiveBoldEnabled="false"
-        app:itemTextAppearanceInactive="@style/bottomNavigationItem"
-        app:itemTextColor="@drawable/bottom_nav_label_selector"
-        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

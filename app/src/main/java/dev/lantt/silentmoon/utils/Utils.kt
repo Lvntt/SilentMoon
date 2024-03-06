@@ -5,6 +5,7 @@ import android.text.Spanned
 import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
+import androidx.annotation.IdRes
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -49,9 +50,18 @@ fun View.setTopPaddingInset() {
     }
 }
 
-fun FragmentManager.navigateToFragment(fragment: Fragment) {
+fun FragmentManager.navigateToFragment(
+    fragment: Fragment,
+    @IdRes fragmentHostId: Int = R.id.fragmentHost
+) {
     beginTransaction()
-        .replace(R.id.fragmentHost, fragment)
+        .replace(fragmentHostId, fragment)
         .addToBackStack(null)
         .commit()
+}
+
+fun FragmentManager.navigateToFragmentWithBottomBar(
+    fragment: Fragment
+) {
+    navigateToFragment(fragment, R.id.bottomNavigationFragmentHost)
 }

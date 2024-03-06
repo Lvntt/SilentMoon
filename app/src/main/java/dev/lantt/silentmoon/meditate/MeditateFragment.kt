@@ -28,7 +28,7 @@ class MeditateFragment : Fragment() {
         binding.meditateTitle.setTopPaddingInset()
 
         binding.dailyCalmCardLayout.setOnClickListener {
-            parentFragmentManager.navigateToFragment(CourseDetailsFragment.newInstance())
+            parentFragment?.parentFragmentManager?.navigateToFragment(CourseDetailsFragment.newInstance())
         }
 
         val categoriesHorizontalPadding = context.resources.getDimensionPixelSize(R.dimen.categories_horizontal_padding)
