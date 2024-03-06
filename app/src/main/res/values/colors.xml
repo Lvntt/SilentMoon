@@ -90,4 +90,6 @@
     <color name="sleepMusicTrackActiveColor">#E6E7F2</color>
     <color name="sleepMusicTrackInactiveColor">#47557E</color>
     <color name="sleepMusicThumbColor">#8E97FD</color>
+
+    <color name="timePickerBackgroundColor">#F5F5F9</color>
 </resources>
