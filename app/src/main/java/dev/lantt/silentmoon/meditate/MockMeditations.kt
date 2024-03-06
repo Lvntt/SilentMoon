@@ -8,22 +8,22 @@ object MockMeditations {
     val meditations = listOf(
         Meditation(
             title = R.string.sevenDaysOfCalm,
-            image = R.drawable.img_7_days_of_calm_bg,
+            image = R.drawable.img_7_days_of_calm_bg_blur,
             isLong = true
         ),
         Meditation(
             title = R.string.anxietyRelease,
-            image = R.drawable.img_anxiety_release_bg,
+            image = R.drawable.img_anxiety_release_bg_blur,
             isLong = false
         ),
         Meditation(
             title = R.string.howToMeditate,
-            image = R.drawable.img_how_to_meditate_bg2,
+            image = R.drawable.img_how_to_meditate_bg_blur2,
             isLong = true
         ),
         Meditation(
             title = R.string.howToMeditate,
-            image = R.drawable.img_how_to_meditate_bg,
+            image = R.drawable.img_how_to_meditate_bg_blur,
             isLong = false
         ),
     )
