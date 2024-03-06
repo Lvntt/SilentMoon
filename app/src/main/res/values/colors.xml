@@ -47,7 +47,11 @@
     <color name="relaxationMusicCardSubtitleColor">#524F53</color>
     <color name="dailyThoughtBackgroundColor">#333242</color>
 
-    <color name="defaultBottomNavItemColor">#A0A3B1</color>
+    <color name="defaultBottomNavUnselectedItemColor">#A0A3B1</color>
+    <color name="sleepBottomNavSelectedItemColor">#E6E7F2</color>
+    <color name="sleepBottomNavUnselectedItemColor">#98A1BD</color>
+    <color name="sleepBottomNavSelectedIconTint">#E6E7F2</color>
+    <color name="sleepBottomNavUnselectedIconTint">#98A1BD</color>
     <color name="bottomNavigationShadow">#0F54575C</color>
 
     <color name="signInSignUpTopBarColor">#FAF8F5</color>

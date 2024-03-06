@@ -1,10 +1,12 @@
 package dev.lantt.silentmoon
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import dev.lantt.silentmoon.databinding.FragmentBottomNavigationHostBinding
 import dev.lantt.silentmoon.home.HomeFragment
 import dev.lantt.silentmoon.meditate.MeditateFragment
@@ -39,10 +41,18 @@ class BottomNavigationHostFragment : Fragment() {
                     newFragment = HomeFragment.newInstance()
                 }
                 R.id.bottom_navigation_sleep -> {
-                    hasBottomBar = false
                     newFragment = WelcomeSleepFragment.newInstance()
 
                     childFragmentManager.navigateToFragmentWithBottomBar(SleepFragment.newInstance())
+
+                    parentFragmentManager.beginTransaction()
+                        .add(R.id.fragmentHost, newFragment)
+                        .addToBackStack(null)
+                        .commit()
+
+                    setSleepBottomBarTheme()
+
+                    return@setOnItemSelectedListener true
                 }
                 R.id.bottom_navigation_meditate -> {
                     hasBottomBar = true
@@ -64,10 +74,36 @@ class BottomNavigationHostFragment : Fragment() {
                 parentFragmentManager.navigateToFragment(newFragment)
             }
 
+            setDefaultBottomBarTheme()
+
             return@setOnItemSelectedListener true
         }
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            childFragmentManager.popBackStack()
+        }
+    }
+
+    private fun setSleepBottomBarTheme() {
+        val context = requireContext()
+
+        binding.bottomNavigationBar.background = ContextCompat.getDrawable(context, R.color.sleepBackgroundColor)
+        binding.bottomNavigationBar.itemIconTintList = ContextCompat.getColorStateList(context, R.color.bottom_nav_sleep_icon_selector)
+        binding.bottomNavigationBar.itemTextColor = ContextCompat.getColorStateList(context, R.color.bottom_nav_sleep_label_selector)
+    }
+
+    private fun setDefaultBottomBarTheme() {
+        val context = requireContext()
+
+        binding.bottomNavigationBar.background = ContextCompat.getDrawable(context, R.color.white)
+        binding.bottomNavigationBar.itemIconTintList = ContextCompat.getColorStateList(context, R.color.bottom_nav_icon_selector)
+        binding.bottomNavigationBar.itemTextColor = ContextCompat.getColorStateList(context, R.color.bottom_nav_label_selector)
     }
 
     companion object {
