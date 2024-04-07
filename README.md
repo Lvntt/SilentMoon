@@ -11,10 +11,7 @@ All the navigation in the app, including Bottom Navigation, is performed by Frag
 # Project screenshots
 
 <p>
-    <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/b64680ba-52d5-4dad-a37b-d8b4be9d4362" width="250" height="540">
-    <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/26c29064-6a26-4019-96f3-b757ba6e26d9" width="250" height="540">
     <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/c06f10f6-0813-4147-acb4-6f456bc3f2c3" width="250" height="540">
-    <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/d6e7290b-aad1-4ccf-aae8-02c412e9b1fa" width="250" height="540">
     <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/3cb07245-09b7-4f81-92e1-fc679240a68f" width="250" height="540">
     <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/c63c98d5-946a-407e-a75e-2d64c6e1ba86" width="250" height="540">
     <img src="https://github.com/Lvntt/SilentMoon/assets/53006125/712505f0-f54e-4175-90bf-d5ee10a69c49" width="250" height="540">
